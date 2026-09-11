@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F6F1E7; color: #241C13; font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #8A6A12; }
+  img { max-width: 100%; }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden; background:#F6F1E7;">
+  <dc-import name="SiteHeader" hint-size="100%,66px"></dc-import>
+
+  <section style="padding:clamp(40px,6vw,86px) clamp(18px,5vw,40px) clamp(24px,3vw,40px);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:18px;">
+      <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:rgba(63,52,19,0.65);">ABOUT US</span>
+      <h1 style="margin:0; max-width:960px; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(32px,5.6vw,80px); line-height:0.95; text-transform:uppercase;">We rent out the reason people stay longer.</h1>
+      <p style="margin:0; font-family:Georgia, serif; font-style:italic; font-size:clamp(18px,2.6vw,26px); color:#8A6A12;">Making Every Event Memorable</p>
+      <p style="margin:0; max-width:640px; font-size:clamp(15px,1.9vw,17px); line-height:1.65; color:rgba(36,28,19,0.82); text-wrap:pretty;">Happy People Rentals offers fun and affordable event rentals in Ottawa, Gatineau and surrounding areas for birthdays, weddings, corporate events, school events, church events, community celebrations, festivals, family gatherings and backyard parties.</p>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(18px,5vw,40px) clamp(40px,6vw,80px);">
+    <div data-reveal="1" style="max-width:1240px; margin:0 auto; border-radius:20px; overflow:hidden; background:#E8DFCC;">
+      <img data-src="{{ heroImg }}" alt="Happy People Rentals event setup" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(18px,5vw,40px) clamp(48px,7vw,96px);">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:clamp(24px,4vw,60px); align-items:start;">
+      <h2 data-reveal="1" style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(24px,3.4vw,48px); line-height:1; text-transform:uppercase;">What we bring to your event.</h2>
+      <div style="display:flex; flex-direction:column; gap:18px; font-size:clamp(15px,1.9vw,16.5px); line-height:1.7; color:rgba(36,28,19,0.84);">
+        <p data-reveal="1" style="margin:0; text-wrap:pretty;">Our rental inventory includes yard games, giant games, party games, arcade games, tables, chairs and canopies. Choose from popular games such as Giant Connect 4, Giant Jenga, Cornhole, Giant Guess Who, Giant Tetris, Plinko, Mini Golf, Ladder Toss, Spikeball, Kan Jam, Bocce Ball, Table Tennis, Foosball and Arcade Basketball.</p>
+        <p data-reveal="1" style="margin:0; text-wrap:pretty;">Whether you are planning a small backyard celebration or a large community or corporate event, Happy People Rentals makes it easy to add interactive entertainment, seating and event essentials to your occasion.</p>
+        <p data-reveal="1" style="margin:0; font-weight:700; color:#241C13; text-wrap:pretty;">Our games and other rental packages are designed to entertain children, families, friends, colleagues, and guests of all ages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#3F3413; color:#FFF8EC; padding:clamp(48px,7vw,96px) clamp(18px,5vw,40px);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(26px,4vw,44px);">
+      <div data-reveal="1" style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:18px; border-bottom:1px solid rgba(255,248,236,0.22); padding-bottom:18px;">
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(24px,3.6vw,54px); text-transform:uppercase;">Who we set up for</h2>
+        <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:#F7B916;">30+ EVENT TYPES</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap:16px;">
+        <sc-for list="{{ served }}" as="s" hint-placeholder-count="6">
+          <div data-reveal="1" style="border:1px solid rgba(255,248,236,0.2); border-radius:14px; padding:22px; display:flex; flex-direction:column; gap:7px;">
+            <span style="font-family:Anton, sans-serif; font-size:20px; text-transform:uppercase;">{{ s.name }}</span>
+            <span style="font-size:13.5px; line-height:1.55; color:rgba(255,248,236,0.78);">{{ s.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,7vw,96px) clamp(18px,5vw,40px);">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap:clamp(20px,3vw,30px); align-items:center;">
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:14px;">
+        <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:rgba(63,52,19,0.65);">HOW WE WORK</span>
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(24px,3.4vw,50px); line-height:1; text-transform:uppercase;">Friendly service you remember.</h2>
+        <p style="margin:0; max-width:470px; font-size:clamp(15px,1.9vw,16.5px); line-height:1.7; color:rgba(36,28,19,0.82); text-wrap:pretty;">We provide friendly rental services that will stay with you for a long time. Clean equipment, flexible packages, and delivery and setup handled end to end.</p>
+      </div>
+      <div data-reveal="1" style="border-radius:18px; overflow:hidden; background:#E8DFCC;">
+        <img data-src="{{ serviceImg }}" alt="Rental delivery and setup" loading="lazy" style="width:100%; display:block;">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(18px,5vw,40px) clamp(48px,7vw,96px);">
+    <div data-reveal="1" style="max-width:1240px; margin:0 auto; border-radius:20px; background:#F7B916; color:#3F3413; padding:clamp(30px,5vw,72px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:26px;">
+      <div style="display:flex; flex-direction:column; gap:12px; max-width:620px;">
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(26px,4vw,56px); line-height:0.98; text-transform:uppercase;">Ready to make your event memorable?</h2>
+        <p style="margin:0; font-size:clamp(15px,1.8vw,16.5px); line-height:1.6;">Let Happy People Rentals bring the fun to your next celebration.</p>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:10px;">
+        <a href="Catalog.dc.html" style="padding:16px 28px; border-radius:999px; background:#3F3413; color:#FFF8EC; font-weight:700; font-size:15.5px;">Browse our rentals</a>
+        <a href="Quote.dc.html" style="padding:16px 28px; border-radius:999px; border:1.5px solid #3F3413; font-weight:700; font-size:15.5px;">Get free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const U = "https://happypeoplerentals.ca/wp-content/uploads/";
+
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      heroImg: U + "2026/08/ChatGPT-Image-Aug-12-2026-02_31_00-PM-1024x585.png",
+      serviceImg: U + "2026/08/ChatGPT-Image-Aug-14-2026-05_10_33-PM-1024x525.png",
+      served: [
+        { name: "Birthdays", note: "Backyard parties and family gatherings of any size." },
+        { name: "Weddings", note: "Cocktail-hour games that keep guests together." },
+        { name: "Corporate Events", note: "Team days, staff picnics and client appreciation." },
+        { name: "Schools", note: "Fun fairs, field days and end-of-year events." },
+        { name: "Religious & Community", note: "Church events and community celebrations." },
+        { name: "Festivals & Carnivals", note: "Multi-station setups for large crowds." }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    const root = document.body;
+    this._hydrateImgs = () => {
+      root.querySelectorAll('img[data-src]').forEach((im) => {
+        const u = im.getAttribute('data-src');
+        if (!u || im.dataset.hydrated) return;
+        im.dataset.hydrated = '1';
+        const localSrc = 'images/' + u.split('/').pop().split('?')[0];
+        im.onerror = () => { im.onerror = null; im.src = u; };
+        im.src = localSrc;
+      });
+    };
+    this._hydrateImgs();
+    this._imgTimer = setInterval(this._hydrateImgs, 500);
+
+    const items = Array.from(root.querySelectorAll('[data-reveal]'));
+    const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    items.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 650ms cubic-bezier(.22,.7,.25,1), transform 650ms cubic-bezier(.22,.7,.25,1)';
+      el.style.transitionDelay = (i % 4) * 60 + 'ms';
+    });
+    this._revealCheck = () => {
+      items.forEach((el) => {
+        if (el.style.opacity === '1') return;
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.92) show(el);
+      });
+    };
+    this._revealCheck();
+    this._onRevealScroll = () => requestAnimationFrame(this._revealCheck);
+    window.addEventListener('scroll', this._onRevealScroll, { passive: true });
+    window.addEventListener('resize', this._onRevealScroll);
+    this._revealSafety = setTimeout(() => items.forEach(show), 1400);
+
+  }
+
+  componentWillUnmount() {
+    if (this._imgTimer) clearInterval(this._imgTimer);
+    if (this._revealSafety) clearTimeout(this._revealSafety);
+    if (this._onRevealScroll) { window.removeEventListener('scroll', this._onRevealScroll); window.removeEventListener('resize', this._onRevealScroll); }
+  }
+}
+</script>
+</body>
+</html>

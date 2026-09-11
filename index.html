@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F1E7; color: #241C13; font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #8A6A12; }
+  img { max-width: 100%; }
+  @keyframes hprMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes hprBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden; background:#F6F1E7;">
+
+  <dc-import name="SiteHeader" overlay="{{ true }}" hint-size="100%,66px"></dc-import>
+
+  <section id="top" style="position:relative; height:100svh; min-height:520px; width:100%; overflow:hidden; background:#2A2117;">
+    <div data-hero-media="1" style="position:absolute; inset:-6% 0 -6% 0; will-change:transform;">
+      <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; display:block;">
+        <source src="media/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(26,20,13,0.5) 0%, rgba(26,20,13,0.12) 36%, rgba(26,20,13,0.8) 100%);"></div>
+
+    <div data-hero-copy="1" style="position:relative; height:100%; display:flex; flex-direction:column; justify-content:flex-end; gap:clamp(18px,3vw,26px); padding:0 clamp(18px,5vw,40px) clamp(40px,6vw,64px); box-sizing:border-box; will-change:transform;">
+      <span style="font-family:ui-monospace, monospace; font-size:clamp(10px,1.4vw,12px); letter-spacing:0.24em; color:#F7B916;">OTTAWA · GATINEAU · SURROUNDING AREAS</span>
+      <h1 style="margin:0; max-width:860px; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(30px,5vw,68px); line-height:0.98; letter-spacing:-0.01em; text-transform:uppercase; color:#FFF8EC; text-shadow:0 2px 30px rgba(0,0,0,0.35);">Giant yard games,<br>delivered to your party.</h1>
+      <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:clamp(16px,3vw,28px);">
+        <p style="margin:0; flex:1 1 300px; min-width:0; max-width:460px; font-size:clamp(14px,1.6vw,15.5px); line-height:1.6; color:rgba(255,248,236,0.88); text-wrap:pretty;">Connect 4, Jenga, cornhole and more. We drop off, set up, and pick up — so you can focus on the people.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a href="Quote.dc.html" style="display:inline-flex; align-items:center; gap:10px; padding:15px 26px; border-radius:999px; background:#F7B916; color:#3F3413; font-weight:700; font-size:15px;">Get a quote <span style="font-size:17px;">→</span></a>
+          <a href="Catalog.dc.html" style="display:inline-flex; align-items:center; gap:10px; padding:15px 26px; border-radius:999px; border:1.5px solid rgba(255,248,236,0.7); color:#FFF8EC; font-weight:700; font-size:15px;">Explore the games</a>
+        </div>
+      </div>
+    </div>
+    <div style="position:absolute; left:50%; bottom:16px; transform:translateX(-50%); font-family:ui-monospace, monospace; font-size:10.5px; letter-spacing:0.28em; color:rgba(255,248,236,0.7); animation:hprBob 2.4s ease-in-out infinite;">SCROLL</div>
+  </section>
+
+  <div style="overflow:hidden; background:#F7B916; color:#3F3413; padding:14px 0;">
+    <div style="display:flex; width:max-content; animation:hprMarquee 28s linear infinite; font-family:Anton, sans-serif; font-size:clamp(16px,2.4vw,22px); letter-spacing:0.05em; text-transform:uppercase; white-space:nowrap;">
+      <span style="padding-right:36px;">Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦</span>
+      <span style="padding-right:36px;">Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦</span>
+    </div>
+  </div>
+
+  <section id="rentals" style="padding:clamp(52px,8vw,120px) clamp(18px,5vw,40px);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(30px,4vw,52px);">
+      <div data-reveal="1" style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:18px; border-bottom:1px solid rgba(63,52,19,0.22); padding-bottom:22px;">
+        <h2 style="margin:0; max-width:760px; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(28px,4.4vw,62px); line-height:0.98; text-transform:uppercase;">Our most popular rentals</h2>
+        <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:rgba(63,52,19,0.65);">01 / CATALOG</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap:clamp(16px,2.4vw,26px);">
+        <sc-for list="{{ games }}" as="game" hint-placeholder-count="4">
+          <a data-reveal="1" href="Catalog.dc.html" style="display:flex; flex-direction:column; gap:14px; background:#FFFDF7; border:1px solid rgba(63,52,19,0.14); border-radius:14px; padding:13px; transition:transform 220ms ease, box-shadow 220ms ease;" style-hover="transform:translateY(-6px); box-shadow:0 18px 40px rgba(63,52,19,0.16); color:#241C13;">
+            <div style="aspect-ratio:4/3; border-radius:9px; overflow:hidden; background:#E8DFCC;">
+              <img data-src="{{ game.img }}" alt="{{ game.name }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px; padding:0 6px 10px;">
+              <h3 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(19px,2.4vw,23px); text-transform:uppercase;">{{ game.name }}</h3>
+              <p style="margin:0; font-size:14px; line-height:1.5; color:rgba(36,28,19,0.72); text-wrap:pretty;">{{ game.blurb }}</p>
+              <span style="margin-top:4px; font-size:13px; font-weight:700; color:#8A6A12;">{{ game.meta }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+      <a data-reveal="1" href="Catalog.dc.html" style="align-self:flex-start; display:inline-flex; align-items:center; gap:10px; padding:15px 26px; border-radius:999px; border:1.5px solid #3F3413; font-weight:700; font-size:15px;" style-hover="background:#3F3413; color:#FFF8EC;">See the full catalog <span style="font-size:17px;">→</span></a>
+    </div>
+  </section>
+
+  <section id="occasions" style="background:#3F3413; color:#FFF8EC; padding:clamp(52px,8vw,112px) 0; overflow:hidden;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(18px,5vw,40px) clamp(28px,4vw,46px); box-sizing:border-box; display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px;">
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:12px; max-width:760px;">
+        <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:#F7B916;">02 / EVENTS</span>
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(28px,4.4vw,62px); line-height:0.98; text-transform:uppercase;">Perfect for every occasion</h2>
+        <p style="margin:0; max-width:540px; font-size:clamp(14px,1.7vw,15.5px); line-height:1.6; color:rgba(255,248,236,0.82);">Over 30 kinds of events covered — birthdays, weddings, corporate days, schools, churches, festivals and community celebrations.</p>
+      </div>
+      <span data-reveal="1" style="font-family:Anton, sans-serif; font-size:clamp(38px,6vw,84px); line-height:0.9; color:#F7B916;">30+</span>
+    </div>
+    <div style="overflow:hidden; padding:6px 0;">
+      <div style="display:flex; width:max-content; gap:18px; animation:hprMarquee 46s linear infinite;">
+        <sc-for list="{{ occasionsLoop }}" as="occ" hint-placeholder-count="8">
+          <figure style="margin:0; position:relative; width:clamp(230px,32vw,360px); height:clamp(170px,24vw,260px); border-radius:14px; overflow:hidden; border:1px solid rgba(255,248,236,0.18); flex:0 0 auto;">
+            <img data-src="{{ occ.img }}" alt="{{ occ.name }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <figcaption style="position:absolute; inset:auto 0 0 0; padding:16px 18px; background:linear-gradient(0deg, rgba(20,16,6,0.88), rgba(20,16,6,0)); font-family:Anton, sans-serif; font-size:clamp(16px,2.2vw,22px); text-transform:uppercase; color:#FFF8EC;">{{ occ.name }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding:clamp(52px,8vw,120px) clamp(18px,5vw,40px);">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:clamp(28px,4vw,48px); align-items:start;">
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:16px;">
+        <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:rgba(63,52,19,0.65);">03 / HOW IT WORKS</span>
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(28px,4vw,56px); line-height:0.98; text-transform:uppercase;">Three steps to a better party.</h2>
+        <p style="margin:0; max-width:420px; font-size:clamp(15px,1.8vw,16px); line-height:1.65; color:rgba(36,28,19,0.78); text-wrap:pretty;">Delivery, setup and pickup are handled by us across Ottawa, Gatineau and surrounding areas.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:2px;">
+        <sc-for list="{{ steps }}" as="step" hint-placeholder-count="3">
+          <div data-reveal="1" style="display:flex; gap:20px; padding:24px 0; border-top:1px solid rgba(63,52,19,0.22);">
+            <span style="font-family:Anton, sans-serif; font-size:28px; color:#8A6A12; line-height:1;">{{ step.num }}</span>
+            <div style="display:flex; flex-direction:column; gap:7px;">
+              <h3 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(19px,2.4vw,23px); text-transform:uppercase;">{{ step.title }}</h3>
+              <p style="margin:0; font-size:15px; line-height:1.6; color:rgba(36,28,19,0.74); text-wrap:pretty;">{{ step.body }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(18px,5vw,40px) clamp(52px,8vw,112px);">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap:1px; background:rgba(63,52,19,0.22); border:1px solid rgba(63,52,19,0.22); border-radius:14px; overflow:hidden;">
+      <sc-for list="{{ stats }}" as="stat" hint-placeholder-count="4">
+        <div data-reveal="1" style="background:#FFFDF7; padding:clamp(24px,3vw,34px) clamp(18px,2.4vw,26px); display:flex; flex-direction:column; gap:7px;">
+          <span style="font-family:Anton, sans-serif; font-size:clamp(30px,4vw,44px); line-height:1; color:#3F3413;">{{ stat.value }}</span>
+          <span style="font-size:13.5px; line-height:1.5; color:rgba(36,28,19,0.72);">{{ stat.label }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="quote" style="padding:0 clamp(18px,5vw,40px) clamp(52px,8vw,112px);">
+    <div data-reveal="1" style="max-width:1240px; margin:0 auto; border-radius:20px; background:#3F3413; color:#FFF8EC; padding:clamp(32px,6vw,80px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:28px;">
+      <div style="display:flex; flex-direction:column; gap:14px; max-width:620px;">
+        <p style="margin:0; font-family:Georgia, serif; font-style:italic; font-size:clamp(17px,2.4vw,22px); color:#F7B916;">Making Every Event Memorable</p>
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(28px,4.4vw,58px); line-height:0.98; text-transform:uppercase;">Book your games for the weekend.</h2>
+        <p style="margin:0; font-size:clamp(15px,1.8vw,16px); line-height:1.6; color:rgba(255,248,236,0.85);">Tell us the date, the place and the crowd size. We'll send a quote within one business day.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; min-width:220px;">
+        <a href="Quote.dc.html" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:17px 30px; border-radius:999px; background:#F7B916; color:#3F3413; font-weight:700; font-size:16px;">Request a quote <span style="font-size:17px;">→</span></a>
+        <a href="tel:+13435585631" style="text-align:center; font-size:15px; font-weight:700; color:#FFF8EC;">343-558-5631</a>
+        <a href="mailto:info@happypeoplerentals.ca" style="text-align:center; font-size:14px; color:rgba(255,248,236,0.8);">info@happypeoplerentals.ca</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const U = "https://happypeoplerentals.ca/wp-content/uploads/";
+
+class Component extends DCLogic {
+  renderVals() {
+    const occasions = [
+      { name: "Birthdays", img: U + "2026/06/ChatGPT-Image-Jun-13-2026-12_02_58-AM-1.png" },
+      { name: "Weddings", img: U + "2026/06/ChatGPT-Image-Jun-13-2026-12_08_32-AM-1.png" },
+      { name: "Corporate Events", img: U + "2026/06/ChatGPT-Image-Jun-12-2026-07_24_31-PM-1.png" },
+      { name: "School Events", img: U + "2026/06/ChatGPT-Image-Jun-12-2026-07_30_27-PM-1.png" },
+      { name: "Festivals & Carnivals", img: U + "2026/06/ChatGPT-Image-Jun-15-2026-02_43_28-PM-1.png" },
+      { name: "Community Days", img: U + "2026/06/ChatGPT-Image-Jun-15-2026-02_40_14-PM-2.png" }
+    ];
+    return {
+      games: [
+        { name: "Giant Connect 4", blurb: "Four-in-a-row at full height. The crowd favourite at every event.", meta: "Ages 5+ · 2 players", img: U + "2026/06/Giant-Connect-4-1024x1011.jpg" },
+        { name: "Giant Jenga", blurb: "A tower that gets taller, wobblier and louder as the night goes on.", meta: "Ages 6+ · 2–8 players", img: U + "2026/06/Giant-Jenga-1-1024x768.jpg" },
+        { name: "Cornhole", blurb: "Two boards, eight bags, endless rematches. Sets up anywhere flat.", meta: "Ages 6+ · 2–4 players", img: U + "2026/06/Cornhole.png" },
+        { name: "Ladder Toss", blurb: "Simple to learn, hard to put down. Great for tight backyards.", meta: "Ages 6+ · 2–4 players", img: U + "2026/06/Ladder-Toss.jpg" }
+      ],
+      occasionsLoop: occasions.concat(occasions),
+      eventTags: ["Birthday parties", "Weddings", "Engagement parties", "Baby showers", "Graduations", "Corporate picnics", "Team building days", "Client appreciation", "Staff appreciation", "Conferences", "Trade shows", "School fun fairs", "Field days", "Prom & grad nights", "University orientation", "Church events", "Community BBQs", "Block parties", "Neighbourhood days", "Canada Day events", "Festivals", "Carnivals", "Fundraisers", "Charity galas", "Sports tournaments", "Camps & day camps", "Family reunions", "Retirement parties", "Housewarmings", "Backyard parties", "Holiday parties", "Movie nights"],
+      steps: [
+        { num: "01", title: "Pick your games", body: "Browse the catalog and tell us what you want. Not sure? Tell us the crowd and we'll suggest a mix." },
+        { num: "02", title: "We deliver and set up", body: "We arrive ahead of your start time, set everything up and show you how it works." },
+        { num: "03", title: "Play, then leave it", body: "When the party's done, we come back and pack it all out. No cleanup on your end." }
+      ],
+      stats: [
+        { value: "30+", label: "Types of events covered" },
+        { value: "14+", label: "Games and attractions available" },
+        { value: "24 hr", label: "Typical quote turnaround" },
+        { value: "Setup", label: "Delivery, setup and pickup included" }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    const root = document.body;
+    const v = root.querySelector('video');
+    if (v) {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.loop = true;
+      v.playsInline = true;
+      v.setAttribute('muted', '');
+      const tryPlay = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      tryPlay();
+      v.addEventListener('canplay', tryPlay);
+      document.addEventListener('click', tryPlay, { once: true });
+    }
+
+    this._hydrateImgs = () => {
+      root.querySelectorAll('img[data-src]').forEach((im) => {
+        const u = im.getAttribute('data-src');
+        if (!u || im.dataset.hydrated) return;
+        im.dataset.hydrated = '1';
+        const localSrc = 'images/' + u.split('/').pop().split('?')[0];
+        im.onerror = () => { im.onerror = null; im.src = u; };
+        im.src = localSrc;
+      });
+    };
+    this._hydrateImgs();
+    this._imgTimer = setInterval(this._hydrateImgs, 500);
+
+    const items = Array.from(root.querySelectorAll('[data-reveal]'));
+    const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    items.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 650ms cubic-bezier(.22,.7,.25,1), transform 650ms cubic-bezier(.22,.7,.25,1)';
+      el.style.transitionDelay = (i % 4) * 60 + 'ms';
+    });
+    this._revealCheck = () => {
+      items.forEach((el) => {
+        if (el.style.opacity === '1') return;
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.92) show(el);
+      });
+    };
+    this._revealCheck();
+    this._onRevealScroll = () => requestAnimationFrame(this._revealCheck);
+    window.addEventListener('scroll', this._onRevealScroll, { passive: true });
+    window.addEventListener('resize', this._onRevealScroll);
+    this._revealSafety = setTimeout(() => items.forEach(show), 1400);
+
+
+    const media = root.querySelector('[data-hero-media]');
+    const copy = root.querySelector('[data-hero-copy]');
+    let ticking = false;
+    this._onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || 0;
+        if (media) media.style.transform = 'translateY(' + (y * 0.28).toFixed(1) + 'px) scale(' + (1 + Math.min(y, 800) * 0.00012).toFixed(4) + ')';
+        if (copy) {
+          copy.style.transform = 'translateY(' + (y * -0.1).toFixed(1) + 'px)';
+          copy.style.opacity = String(Math.max(0, 1 - y / 640));
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+
+  componentWillUnmount() {
+    if (this._imgTimer) clearInterval(this._imgTimer);
+    if (this._revealSafety) clearTimeout(this._revealSafety);
+    if (this._onRevealScroll) { window.removeEventListener('scroll', this._onRevealScroll); window.removeEventListener('resize', this._onRevealScroll); }
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+}
+</script>
+</body>
+</html>

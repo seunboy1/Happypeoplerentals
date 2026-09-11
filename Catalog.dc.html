@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F1E7; color: #241C13; font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #8A6A12; }
+  img { max-width: 100%; }
+  @keyframes hprMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden; background:#F6F1E7;">
+  <dc-import name="SiteHeader" hint-size="100%,66px"></dc-import>
+
+  <section style="padding:clamp(40px,6vw,86px) clamp(18px,5vw,40px) clamp(24px,3vw,44px);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:18px;">
+      <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:rgba(63,52,19,0.65);">RENTAL CATALOG</span>
+      <h1 style="margin:0; max-width:900px; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(32px,5.6vw,80px); line-height:0.95; text-transform:uppercase; letter-spacing:-0.01em;">Everything you can rent.</h1>
+      <p style="margin:0; max-width:640px; font-size:clamp(15px,1.9vw,16.5px); line-height:1.65; color:rgba(36,28,19,0.8); text-wrap:pretty;">From giant Connect 4, arcade basketball, Foosball and Jenga to tables and chairs, canopies and other party equipment. Bring laughter, friendly competition, and unforgettable memories to your next event.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:6px;">
+        <sc-for list="{{ groups }}" as="g" hint-placeholder-count="4">
+          <a href="{{ g.href }}" style="padding:10px 17px; border-radius:999px; border:1.5px solid rgba(63,52,19,0.32); font-size:13.5px; font-weight:700;" style-hover="background:#3F3413; color:#FFF8EC;">{{ g.label }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="yard-games" style="padding:clamp(24px,3vw,44px) clamp(18px,5vw,40px);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(22px,3vw,34px);">
+      <h2 data-reveal="1" style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(24px,3.4vw,48px); text-transform:uppercase; border-bottom:1px solid rgba(63,52,19,0.22); padding-bottom:16px;">Featured yard games</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap:clamp(16px,2.4vw,26px);">
+        <sc-for list="{{ featured }}" as="item" hint-placeholder-count="7">
+          <article data-reveal="1" style="display:flex; flex-direction:column; gap:13px; background:#FFFDF7; border:1px solid rgba(63,52,19,0.14); border-radius:14px; padding:13px; transition:transform 220ms ease, box-shadow 220ms ease;" style-hover="transform:translateY(-6px); box-shadow:0 18px 40px rgba(63,52,19,0.16);">
+            <div style="aspect-ratio:4/3; border-radius:9px; overflow:hidden; background:#E8DFCC;">
+              <img data-src="{{ item.img }}" alt="{{ item.name }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px; padding:0 6px 10px;">
+              <h3 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(19px,2.4vw,23px); text-transform:uppercase;">{{ item.name }}</h3>
+              <p style="margin:0; font-size:14px; line-height:1.5; color:rgba(36,28,19,0.72); text-wrap:pretty;">{{ item.blurb }}</p>
+              <span style="margin-top:4px; font-size:13px; font-weight:700; color:#8A6A12;">{{ item.meta }}</span>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="giant-games" style="padding:clamp(24px,3vw,44px) clamp(18px,5vw,40px);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(20px,3vw,30px);">
+      <h2 data-reveal="1" style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(24px,3.4vw,48px); text-transform:uppercase; border-bottom:1px solid rgba(63,52,19,0.22); padding-bottom:16px;">Also available</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 185px), 1fr)); gap:13px;">
+        <sc-for list="{{ more }}" as="m" hint-placeholder-count="9">
+          <div data-reveal="1" style="background:#FFFDF7; border:1px solid rgba(63,52,19,0.14); border-radius:12px; padding:18px; display:flex; flex-direction:column; gap:6px;">
+            <span style="font-family:Anton, sans-serif; font-size:19px; text-transform:uppercase;">{{ m.name }}</span>
+            <span style="font-size:13.5px; line-height:1.5; color:rgba(36,28,19,0.72);">{{ m.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="essentials" style="padding:clamp(30px,4vw,56px) clamp(18px,5vw,40px) clamp(48px,7vw,92px);">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap:clamp(20px,3vw,30px); align-items:center;">
+      <div data-reveal="1" style="border-radius:16px; overflow:hidden; background:#E8DFCC;">
+        <img data-src="{{ essentialsImg }}" alt="Tables, chairs and canopies" loading="lazy" style="width:100%; display:block;">
+      </div>
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:14px;">
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(24px,3.4vw,48px); line-height:1; text-transform:uppercase;">Tables, chairs and canopies.</h2>
+        <p style="margin:0; max-width:480px; font-size:clamp(15px,1.8vw,16px); line-height:1.65; color:rgba(36,28,19,0.8); text-wrap:pretty;">We provide clean equipment, flexible packages, and delivery and setup across Ottawa, Gatineau and surroundings. Add seating, tables and shade to any rental and we bring it all in one trip.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a href="Quote.dc.html" style="padding:15px 26px; border-radius:999px; background:#F7B916; color:#3F3413; font-weight:700; font-size:15px;">Get a quote</a>
+          <a href="Packages.dc.html" style="padding:15px 26px; border-radius:999px; border:1.5px solid #3F3413; font-weight:700; font-size:15px;" style-hover="background:#3F3413; color:#FFF8EC;">See packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="overflow:hidden; background:#F7B916; color:#3F3413; padding:14px 0;">
+    <div style="display:flex; width:max-content; animation:hprMarquee 28s linear infinite; font-family:Anton, sans-serif; font-size:clamp(16px,2.4vw,22px); letter-spacing:0.05em; text-transform:uppercase; white-space:nowrap;">
+      <span style="padding-right:36px;">Delivery ✦ Setup ✦ Pickup ✦ Ottawa ✦ Gatineau ✦ Clean equipment ✦ Flexible packages ✦ 30+ event types ✦</span>
+      <span style="padding-right:36px;">Delivery ✦ Setup ✦ Pickup ✦ Ottawa ✦ Gatineau ✦ Clean equipment ✦ Flexible packages ✦ 30+ event types ✦</span>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const U = "https://happypeoplerentals.ca/wp-content/uploads/";
+
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      essentialsImg: U + "2026/06/ChatGPT-Image-Jun-26-2026-10_56_06-PM-1-1024x683.png",
+      groups: [
+        { label: "Yard games", href: "#yard-games" },
+        { label: "Giant & arcade games", href: "#giant-games" },
+        { label: "Tables, chairs, canopies", href: "#essentials" },
+        { label: "Packages", href: "Packages.dc.html" },
+        { label: "Get a quote", href: "Quote.dc.html" }
+      ],
+      featured: [
+        { name: "Giant Jenga", blurb: "A tower that gets taller, wobblier and louder as the night goes on.", meta: "Ages 6+ · 2–8 players", img: U + "2026/06/virgil-cayasa-lskYDE0WKJg-unsplash-5-684x1024.jpg" },
+        { name: "Giant Connect 4", blurb: "Four-in-a-row at full height. The crowd favourite at every event.", meta: "Ages 5+ · 2 players", img: U + "2026/06/ChatGPT-Image-Jun-8-2026-03_06_26-PM-1-1024x768.png" },
+        { name: "Cornhole", blurb: "Two boards, eight bags, endless rematches. Sets up anywhere flat.", meta: "Ages 6+ · 2–4 players", img: U + "2026/08/ChatGPT-Image-Aug-14-2026-06_46_57-PM-1-1024x768.png" },
+        { name: "Ladder Toss", blurb: "Simple to learn, hard to put down. Great for tight backyards.", meta: "Ages 6+ · 2–4 players", img: U + "2026/06/meritt-thomas-6d6bTwUDTE0-unsplash-1-1-683x1024.jpg" },
+        { name: "Table Tennis", blurb: "Full-size table for indoor halls or a flat stretch of lawn.", meta: "Ages 6+ · 2–4 players", img: U + "2026/08/ping-pong.jpeg" },
+        { name: "Arcade Basketball", blurb: "Two-hoop shootout with timer and scoreboard. A queue always forms.", meta: "Ages 6+ · 1–2 players", img: U + "2026/08/ChatGPT-Image-Aug-14-2026-06_54_01-PM-1024x768.png" },
+        { name: "Foosball", blurb: "Fast, loud and easy to run tournaments on. Great indoors.", meta: "Ages 6+ · 2–4 players", img: U + "2026/08/foosball.png" }
+      ],
+      more: [
+        { name: "Giant Guess Who", note: "Two-player face-off board" },
+        { name: "Giant Tetris", note: "Stacking blocks, team play" },
+        { name: "Plinko", note: "Carnival-style drop board" },
+        { name: "Mini Golf", note: "Portable putting holes" },
+        { name: "Spikeball", note: "Fast four-player round net" },
+        { name: "Kan Jam", note: "Frisbee throw-and-deflect" },
+        { name: "Bocce Ball", note: "Low-key lawn classic" },
+        { name: "Popcorn Machines", note: "Concession add-on" },
+        { name: "Tables, Chairs & Canopies", note: "Seating and shade" }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    const root = document.body;
+    this._hydrateImgs = () => {
+      root.querySelectorAll('img[data-src]').forEach((im) => {
+        const u = im.getAttribute('data-src');
+        if (!u || im.dataset.hydrated) return;
+        im.dataset.hydrated = '1';
+        const localSrc = 'images/' + u.split('/').pop().split('?')[0];
+        im.onerror = () => { im.onerror = null; im.src = u; };
+        im.src = localSrc;
+      });
+    };
+    this._hydrateImgs();
+    this._imgTimer = setInterval(this._hydrateImgs, 500);
+
+    const items = Array.from(root.querySelectorAll('[data-reveal]'));
+    const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    items.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 650ms cubic-bezier(.22,.7,.25,1), transform 650ms cubic-bezier(.22,.7,.25,1)';
+      el.style.transitionDelay = (i % 4) * 60 + 'ms';
+    });
+    this._revealCheck = () => {
+      items.forEach((el) => {
+        if (el.style.opacity === '1') return;
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.92) show(el);
+      });
+    };
+    this._revealCheck();
+    this._onRevealScroll = () => requestAnimationFrame(this._revealCheck);
+    window.addEventListener('scroll', this._onRevealScroll, { passive: true });
+    window.addEventListener('resize', this._onRevealScroll);
+    this._revealSafety = setTimeout(() => items.forEach(show), 1400);
+
+  }
+
+  componentWillUnmount() {
+    if (this._imgTimer) clearInterval(this._imgTimer);
+    if (this._revealSafety) clearTimeout(this._revealSafety);
+    if (this._onRevealScroll) { window.removeEventListener('scroll', this._onRevealScroll); window.removeEventListener('resize', this._onRevealScroll); }
+  }
+}
+</script>
+</body>
+</html>

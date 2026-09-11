@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F6F1E7; color: #241C13; font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #8A6A12; }
+  input, select, textarea { font-family: inherit; font-size: 15px; color: #241C13; background: #FFFDF7; border: 1px solid rgba(63,52,19,0.28); border-radius: 10px; padding: 13px 14px; width: 100%; box-sizing: border-box; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid #8A6A12; outline-offset: 1px; }
+  label { font-size: 13px; font-weight: 700; }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden; background:#F6F1E7;">
+  <dc-import name="SiteHeader" hint-size="100%,66px"></dc-import>
+
+  <section style="padding:clamp(36px,5vw,80px) clamp(18px,5vw,40px) clamp(48px,7vw,96px);">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap:clamp(28px,4vw,64px); align-items:start;">
+
+      <div style="display:flex; flex-direction:column; gap:22px;">
+        <span style="font-family:ui-monospace, monospace; font-size:11.5px; letter-spacing:0.2em; color:rgba(63,52,19,0.65);">GET A QUOTE</span>
+        <h1 style="margin:0; font-family:Anton, sans-serif; font-weight:400; font-size:clamp(32px,5vw,72px); line-height:0.95; text-transform:uppercase;">Tell us about your event.</h1>
+        <p style="margin:0; max-width:460px; font-size:clamp(15px,1.9vw,16.5px); line-height:1.65; color:rgba(36,28,19,0.8); text-wrap:pretty;">Send the date, the place and roughly how many people are coming. We'll come back with a price and a delivery window within one business day.</p>
+        <div style="display:flex; flex-direction:column; gap:0; border-top:1px solid rgba(63,52,19,0.22);">
+          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="3">
+            <div style="display:flex; gap:16px; padding:16px 0; border-bottom:1px solid rgba(63,52,19,0.22);">
+              <span style="font-family:Anton, sans-serif; font-size:19px; color:#8A6A12; min-width:30px;">{{ f.num }}</span>
+              <span style="font-size:14.5px; line-height:1.55; color:rgba(36,28,19,0.82);">{{ f.text }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px 22px; font-size:14.5px; font-weight:700;">
+          <a href="tel:+13435585631">343-558-5631</a>
+          <a href="mailto:info@happypeoplerentals.ca">info@happypeoplerentals.ca</a>
+        </div>
+      </div>
+
+      <div style="background:#FFFDF7; border:1px solid rgba(63,52,19,0.16); border-radius:18px; padding:clamp(20px,3vw,38px); box-shadow:0 20px 50px rgba(63,52,19,0.1);">
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; gap:14px; padding:16px 0;">
+            <span style="font-family:Anton, sans-serif; font-size:clamp(26px,4vw,34px); text-transform:uppercase; line-height:1;">Request sent.</span>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:rgba(36,28,19,0.78);">Thanks — we have your details and we'll reply with a quote within one business day.</p>
+            <a href="Catalog.dc.html" style="align-self:flex-start; padding:14px 24px; border-radius:999px; border:1.5px solid #3F3413; font-weight:700; font-size:15px;" style-hover="background:#3F3413; color:#FFF8EC;">Keep browsing the catalog</a>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ onSubmit }}" style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap:14px;">
+              <div style="display:flex; flex-direction:column; gap:7px;">
+                <label for="q-name">Your name</label>
+                <input id="q-name" type="text" required placeholder="Jane Tremblay">
+              </div>
+              <div style="display:flex; flex-direction:column; gap:7px;">
+                <label for="q-email">Email</label>
+                <input id="q-email" type="email" required placeholder="jane@email.com">
+              </div>
+              <div style="display:flex; flex-direction:column; gap:7px;">
+                <label for="q-phone">Phone</label>
+                <input id="q-phone" type="tel" placeholder="613 000 0000">
+              </div>
+              <div style="display:flex; flex-direction:column; gap:7px;">
+                <label for="q-date">Event date</label>
+                <input id="q-date" type="date">
+              </div>
+              <div style="display:flex; flex-direction:column; gap:7px;">
+                <label for="q-type">Event type</label>
+                <select id="q-type">
+                  <option>Birthday</option>
+                  <option>Wedding</option>
+                  <option>Corporate event</option>
+                  <option>School event</option>
+                  <option>Church or community event</option>
+                  <option>Festival or carnival</option>
+                  <option>Fundraiser</option>
+                  <option>Family reunion</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:7px;">
+                <label for="q-guests">Guests</label>
+                <select id="q-guests">
+                  <option>Under 25</option>
+                  <option>25–75</option>
+                  <option>75–150</option>
+                  <option>150+</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:7px;">
+              <label for="q-location">Event location</label>
+              <input id="q-location" type="text" placeholder="Neighbourhood or venue in Ottawa / Gatineau">
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:7px;">
+              <label for="q-pack">Package</label>
+              <select id="q-pack">
+                <option>Not sure yet — suggest something</option>
+                <option>The Backyard</option>
+                <option>The Block Party</option>
+                <option>The Field Day</option>
+                <option>Individual games only</option>
+              </select>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <label>Which games are you after?</label>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <sc-for list="{{ picks }}" as="p" hint-placeholder-count="10">
+                  <button type="button" onClick="{{ p.toggle }}" style="{{ p.style }}">{{ p.name }}</button>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:7px;">
+              <label for="q-notes">Anything else</label>
+              <textarea id="q-notes" rows="4" placeholder="Setup time, surface, power access, tables and chairs…"></textarea>
+            </div>
+
+            <input id="q-company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+            <button type="submit" style="margin-top:4px; padding:17px 28px; border:none; border-radius:999px; background:#F7B916; color:#3F3413; font-family:inherit; font-size:16px; font-weight:700; cursor:pointer;" style-hover="background:#E0A50C;">Send my request</button>
+            <span style="font-size:12.5px; color:rgba(36,28,19,0.62);">This is a design prototype — submissions are not sent anywhere yet.</span>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const GAMES = ["Giant Connect 4", "Giant Jenga", "Cornhole", "Ladder Toss", "Table Tennis", "Foosball", "Arcade Basketball", "Giant Tetris", "Giant Guess Who", "Plinko", "Mini Golf", "Popcorn Machine", "Tables & Chairs", "Canopies"];
+
+class Component extends DCLogic {
+  state = { selected: [], submitted: false };
+
+  toggle(name) {
+    this.setState((s) => ({
+      selected: s.selected.indexOf(name) > -1 ? s.selected.filter((n) => n !== name) : s.selected.concat(name)
+    }));
+  }
+
+  renderVals() {
+    const sel = this.state.selected;
+    return {
+      submitted: this.state.submitted,
+      showForm: !this.state.submitted,
+      onSubmit: (e) => {
+        e.preventDefault();
+        const val = (id) => { const el = document.getElementById(id); return el ? el.value : ''; };
+        const payload = {
+          form: 'Quote request',
+          name: val('q-name'), email: val('q-email'), phone: val('q-phone'),
+          date: val('q-date'), type: val('q-type'), guests: val('q-guests'),
+          location: val('q-location'), package: val('q-pack'),
+          games: this.state.selected.join(', '), notes: val('q-notes'), company: val('q-company')
+        };
+        this.setState({ submitted: true });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        fetch('send-form.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(() => {});
+      },
+      facts: [
+        { num: "01", text: "Delivery, setup and pickup across Ottawa, Gatineau and surrounding areas." },
+        { num: "02", text: "Flexible packages — one game for a backyard, or a full carnival lineup." },
+        { num: "03", text: "Equipment arrives clean and checked, with a walkthrough on how to play." }
+      ],
+      picks: GAMES.map((name) => {
+        const on = sel.indexOf(name) > -1;
+        return {
+          name,
+          toggle: () => this.toggle(name),
+          style: "padding:10px 15px; border-radius:999px; cursor:pointer; font-family:inherit; font-size:13.5px; font-weight:700; transition:all 160ms ease; border:1.5px solid " +
+            (on ? "#8A6A12" : "rgba(63,52,19,0.28)") + "; background:" + (on ? "#F7B916" : "transparent") + "; color:#3F3413;"
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
