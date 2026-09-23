@@ -42,5 +42,6 @@ Thumbs.db
 *.min.js
 .thumbnail 
 
+
 # Local Netlify folder
 .netlify
