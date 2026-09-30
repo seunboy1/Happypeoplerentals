@@ -7,10 +7,10 @@
 </head>
 <body>
 <x-dc>
-<footer style="background:#3F3413; color:rgba(255,248,236,0.82); padding:clamp(44px,6vw,72px) clamp(18px,5vw,40px) 30px;">
-  <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(28px,4vw,56px); justify-content:space-between;">
+<footer class="site-footer">
+  <div class="site-footer__grid">
 
-    <div style="display:flex; flex-direction:column; gap:14px; min-width:240px; max-width:340px;">
+    <div class="site-footer__col" style="gap:16px; max-width:340px;">
       <div style="display:flex; align-items:center; gap:12px;">
         <span style="width:38px; height:38px; border-radius:50%; background:#F7B916; display:flex; align-items:center; justify-content:center; font-size:21px; color:#3F3413;">☺</span>
         <span style="display:flex; flex-direction:column; line-height:0.9; font-family:Anton, sans-serif; text-transform:uppercase; color:#FFF8EC;">
@@ -18,38 +18,37 @@
           <span style="font-size:10px; letter-spacing:0.4em; color:#F7B916;">Rentals</span>
         </span>
       </div>
-      <p style="margin:0; font-family:Georgia, serif; font-style:italic; font-size:19px; line-height:1.3; color:#F7B916;">Making Every<br>Event Memorable</p>
-      <p style="margin:0; font-size:14px; line-height:1.6;">Yard games, party and event rentals in Ottawa, Gatineau and surrounding areas.</p>
+      <p style="font-family:Georgia, serif; font-style:italic; font-size:20px; line-height:1.3; color:#F7B916;">Making Every Event Memorable</p>
+      <p>Giant yard games, party games, tables, chairs and canopies. Delivered, set up and picked up in Ottawa, Gatineau and nearby towns.</p>
     </div>
 
-    <div style="display:flex; flex-direction:column; gap:12px; min-width:210px;">
-      <span style="font-family:ui-monospace, monospace; font-size:11px; letter-spacing:0.2em; color:#F7B916;">GET IN TOUCH</span>
-      <a href="mailto:info@happypeoplerentals.ca" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">info@happypeoplerentals.ca</a>
-      <a href="tel:+13435585631" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">343-558-5631</a>
-      <a href="https://happypeoplerentals.ca" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">happypeoplerentals.ca</a>
-      <a href="https://instagram.com/happypeoplerentals" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">Instagram — @happypeoplerentals</a>
-      <a href="https://www.facebook.com/profile.php?id=61590511022603" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">Facebook — HP Rentals</a>
+    <div class="site-footer__col">
+      <h4>Get in touch</h4>
+      <a href="tel:+13435585631">343-558-5631</a>
+      <a href="mailto:info@happypeoplerentals.ca">info@happypeoplerentals.ca</a>
+      <a href="https://instagram.com/happypeoplerentals">Instagram @happypeoplerentals</a>
+      <a href="https://www.facebook.com/profile.php?id=61590511022603">Facebook: HP Rentals</a>
     </div>
 
-    <div style="display:flex; flex-direction:column; gap:12px; min-width:150px;">
-      <span style="font-family:ui-monospace, monospace; font-size:11px; letter-spacing:0.2em; color:#F7B916;">SITE</span>
-      <a href="index.html" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">Home</a>
-      <a href="Catalog.dc.html" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">Rentals</a>
-      <a href="Packages.dc.html" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">Packages</a>
-      <a href="About.dc.html" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">About</a>
+    <div class="site-footer__col">
+      <h4>Rentals</h4>
+      <a href="Catalog.dc.html">All games</a>
+      <a href="Packages.dc.html">Packages</a>
+      <a href="Catalog.dc.html#essentials">Tables, chairs &amp; canopies</a>
+      <a href="About.dc.html">About us</a>
     </div>
 
-    <div style="display:flex; flex-direction:column; gap:12px; min-width:150px;">
-      <span style="font-family:ui-monospace, monospace; font-size:11px; letter-spacing:0.2em; color:#F7B916;">BOOK</span>
-      <a href="Quote.dc.html" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">Get a Quote</a>
-      <a href="Contact.dc.html" style="color:#FFF8EC; text-decoration:none; font-size:14.5px;">Contact</a>
-      <span style="font-size:13.5px; color:rgba(255,248,236,0.6); line-height:1.55;">Serving Ottawa, Gatineau,<br>Kanata, Orléans, Barrhaven</span>
+    <div class="site-footer__col">
+      <h4>Book</h4>
+      <a href="Quote.dc.html">Get a quote</a>
+      <a href="Contact.dc.html">Contact</a>
+      <span style="color:rgba(255,248,236,0.6); line-height:1.55;">We deliver to Ottawa, Gatineau, Kanata, Orléans, Barrhaven and Nepean.</span>
     </div>
   </div>
 
-  <div style="max-width:1240px; margin:clamp(30px,4vw,52px) auto 0; padding-top:18px; border-top:1px solid rgba(255,248,236,0.18); display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; font-size:12.5px; color:rgba(255,248,236,0.6);">
-    <span>Happy People Rentals 2026. All Rights Reserved.</span>
-    <span>30+ event types covered across the National Capital Region</span>
+  <div class="site-footer__base">
+    <span>© 2026 Happy People Rentals</span>
+    <span>Ottawa · Gatineau</span>
   </div>
 </footer>
 </x-dc>

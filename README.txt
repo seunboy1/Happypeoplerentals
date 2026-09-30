@@ -17,9 +17,10 @@ Upload the CONTENTS of this folder into your Hostinger public_html directory:
   Quote.dc.html
   SiteHeader.dc.html             <- shared nav (required)
   SiteFooter.dc.html             <- shared footer (required)
+  site.css                       <- shared styles: colours, fonts, spacing (required)
   support.js                     <- runtime (required)
   send-form.php                  <- form handler
-  media/hero.mp4                 <- hero video
+  Media/hero.mp4                 <- hero video (folder name is case-sensitive: capital M)
   images/                        <- photos (see section 3)
 
 Optional but recommended: rename "Happy People Rentals.dc.html" to index.html so the
