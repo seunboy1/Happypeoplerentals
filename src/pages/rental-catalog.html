@@ -1,0 +1,86 @@
+<!--
+{
+  "path": "/rental-catalog/",
+  "title": "Party Rental Catalog, Ottawa | Happy People Rentals",
+  "description": "See every game and party item we rent in Ottawa and Gatineau, with prices: giant games, inflatables, arcade games, tables, chairs and canopies.",
+  "crumb": "Rental Catalog",
+  "pagetype": "CollectionPage",
+  "image": "connect4",
+  "service": { "name": "Party and event rentals in Ottawa", "type": "Party equipment rental", "items": ["group:giant", "group:arcade", "group:inflatable", "group:party"] }
+}
+-->
+<header class="page-head">
+  <div class="wrap">
+    <h1 class="display d-1">Party rental catalog</h1>
+    <p class="lede">Giant yard games, arcade games, inflatables, tables, chairs, canopies and other event essentials. Choose your favourites, then request a free quote for your event.</p>
+    <nav class="jump" aria-label="Sections on this page">
+      <a href="#giant">Giant &amp; yard games</a>
+      <a href="#arcade">Arcade &amp; table games</a>
+      <a href="#inflatable">Inflatable games</a>
+      <a href="#party">Party &amp; event items</a>
+      <a href="#more">Bouncy castle, photo booth &amp; more</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" id="giant">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display d-2">Giant &amp; yard games</h2>
+      <a href="/giant-games/" class="link">More about giant games →</a>
+    </div>
+    {{cards:group:giant}}
+  </div>
+</section>
+
+<section class="section section--chalk" id="arcade">
+  <div class="wrap">
+    <div class="section-head"><h2 class="display d-2">Arcade &amp; table games</h2></div>
+    {{cards:group:arcade}}
+  </div>
+</section>
+
+<section class="section" id="inflatable">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display d-2">Inflatable games</h2>
+      <a href="/inflatable-games/" class="link">More about inflatable games →</a>
+    </div>
+    {{cards:group:inflatable}}
+  </div>
+</section>
+
+<section class="section section--chalk" id="party">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display d-2">Party &amp; event items</h2>
+      <a href="/tables-chairs-for-every-celebration/" class="link">More about tables &amp; chairs →</a>
+    </div>
+    {{cards:group:party}}
+  </div>
+</section>
+
+<section class="section" id="more">
+  <div class="wrap">
+    <div class="section-head"><h2 class="display d-2">Bouncy castle, photo booth &amp; more</h2></div>
+    <div class="tiles">
+      <a class="tile" href="/bouncy-castle/"><div class="tile__photo">{{img:bouncy}}</div><div class="tile__body"><h3 class="display d-3">Bouncy castle</h3><p>Hours of bouncing fun for kids.</p></div></a>
+      <a class="tile" href="/photo-booth/"><div class="tile__photo">{{img:booth_party}}</div><div class="tile__body"><h3 class="display d-3">Photo booth &amp; flower walls</h3><p>Photos and backdrops guests remember.</p></div></a>
+      <a class="tile" href="/flower-bar/"><div class="tile__photo">{{img:flowerbar}}</div><div class="tile__body"><h3 class="display d-3">Flower bar &amp; umbrellas</h3><p>A bouquet-making station for guests.</p></div></a>
+      <a class="tile" href="/packages/"><div class="tile__photo">{{img:g_games}}</div><div class="tile__body"><h3 class="display d-3">Packages</h3><p>Ready-made game lineups for any crowd size.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap" style="padding-block:clamp(48px,7vw,88px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+    <div class="stack" style="max-width:620px;">
+      <h2 class="display d-2">Found what you need?</h2>
+      <p class="lede">Send us your list and event details. We'll reply with a free, no-obligation quote.</p>
+    </div>
+    <div class="btn-row">
+      <a href="/get-a-quote/" class="btn btn--ink">Get a free quote</a>
+      <a href="tel:{{tel}}" class="btn btn--line">Call {{phone}}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+# Happy People Rentals: server rules for Hostinger (Apache / LiteSpeed).
+# Upload this file to public_html together with the rest of the site.
+
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # One address for the whole site: https and no "www"
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://happypeoplerentals.ca%{REQUEST_URI} [L,R=301]
+
+  # Build files are not part of the website
+  RewriteRule ^(src|tools|uploads)(/|$) - [R=404,L]
+
+  # Pages from the old WordPress site that no longer exist.
+  # A 301 redirect tells Google the page moved, so its ranking carries over.
+  RewriteRule ^home/?$ / [R=301,L]
+  RewriteRule ^rentals/?$ /rental-catalog/ [R=301,L]
+  RewriteRule ^shop/?$ /rental-catalog/ [R=301,L]
+  RewriteRule ^(product|product-category)(/.*)?$ /rental-catalog/ [R=301,L]
+  RewriteRule ^(cart|checkout|my-account)/?$ /rental-catalog/ [R=301,L]
+  RewriteRule ^(feed|comments/feed)/?$ / [R=301,L]
+
+  # Old sitemaps made by the All in One SEO plugin now point to the new sitemap
+  RewriteRule ^(sitemap_index|page-sitemap|addl-sitemap|post-sitemap)\.xml$ /sitemap.xml [R=301,L]
+  RewriteRule ^sitemap\.rss$ /sitemap.xml [R=301,L]
+
+  # File names from the earlier version of this website package
+  RewriteRule ^Catalog\.dc\.html$ /rental-catalog/ [R=301,L]
+  RewriteRule ^Packages\.dc\.html$ /packages/ [R=301,L]
+  RewriteRule ^About\.dc\.html$ /about/ [R=301,L]
+  RewriteRule ^Contact\.dc\.html$ /contact-us/ [R=301,L]
+  RewriteRule ^Quote\.dc\.html$ /get-a-quote/ [R=301,L]
+  # Only when a visitor typed /index.html (the server also reads it internally for "/")
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?]
+  RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# Let browsers keep images, video, styles and scripts so repeat visits load fast
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Compress text files
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/xml application/xml text/plain
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
