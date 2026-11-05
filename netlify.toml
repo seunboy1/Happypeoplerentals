@@ -1,8 +1,60 @@
+# Only used if the site is hosted on Netlify. On Hostinger, .htaccess does the same job.
+# Netlify serves 404.html automatically for addresses that don't exist.
+
 [build]
 publish = "."
-publishOrigin = "default"
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+from = "/home/"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/rentals/"
+to = "/rental-catalog/"
+status = 301
+
+[[redirects]]
+from = "/shop/"
+to = "/rental-catalog/"
+status = 301
+
+[[redirects]]
+from = "/product/*"
+to = "/rental-catalog/"
+status = 301
+
+[[redirects]]
+from = "/page-sitemap.xml"
+to = "/sitemap.xml"
+status = 301
+
+[[redirects]]
+from = "/addl-sitemap.xml"
+to = "/sitemap.xml"
+status = 301
+
+[[redirects]]
+from = "/sitemap_index.xml"
+to = "/sitemap.xml"
+status = 301
+
+[[redirects]]
+from = "/sitemap.rss"
+to = "/sitemap.xml"
+status = 301
+
+[[redirects]]
+from = "/feed/"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/src/*"
+to = "/404.html"
+status = 404
+
+[[redirects]]
+from = "/tools/*"
+to = "/404.html"
+status = 404

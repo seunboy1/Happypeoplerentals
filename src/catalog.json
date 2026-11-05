@@ -1,0 +1,50 @@
+{
+  "_note": "Every rental item. Prices are in Canadian dollars, copied from the live Rental Catalog. Leave price empty (null) to show 'Ask for price'. 'group' decides which page and section the item appears in.",
+  "groups": {
+    "giant": { "name": "Giant & yard games", "page": "/giant-games/" },
+    "arcade": { "name": "Arcade & table games", "page": "/rental-catalog/#arcade" },
+    "inflatable": { "name": "Inflatable games", "page": "/inflatable-games/" },
+    "party": { "name": "Party & event items", "page": "/rental-catalog/#party" }
+  },
+  "items": [
+    { "id": "cornhole", "name": "Cornhole", "group": "giant", "price": 50, "img": "cornhole", "desc": "A tossing game for all ages. Each board measures 4 ft by 2 ft and sets up on any flat lawn." },
+    { "id": "connect4", "name": "Giant Connect 4", "group": "giant", "price": 50, "img": "connect4", "desc": "The classic four-in-a-row game at full height. Drop the discs, block your opponent and connect four first." },
+    { "id": "jenga", "name": "Giant Jenga", "group": "giant", "price": 50, "img": "jenga", "desc": "The classic stacking game with giant-sized blocks. Great for guests of all ages." },
+    { "id": "guesswho", "name": "Giant Guess Who", "group": "giant", "price": 50, "img": "guesswho", "desc": "An oversized version of the guessing game for parties, school events and team activities." },
+    { "id": "axethrow", "name": "Axe Throw", "group": "giant", "price": 50, "img": "axethrow", "desc": "A safe target game where friends and teammates compete for the most points. Popular for team building." },
+    { "id": "kanjam", "name": "Kan Jam", "group": "giant", "price": 50, "img": "kanjam", "desc": "A fast team game: throw the flying disc and work together to hit or land it in the goal." },
+    { "id": "tetris", "name": "Giant Tetris", "group": "giant", "price": 50, "img": "tetris", "desc": "Race to stack and arrange oversized pieces without letting the tower fall." },
+    { "id": "kerplunk", "name": "Giant Kerplunk", "group": "giant", "price": 50, "img": "kerplunk", "desc": "Pull the sticks out one by one and try to keep the balls from dropping. Fun for kids and adults." },
+    { "id": "ringtoss", "name": "Ring Toss", "group": "giant", "price": 50, "img": "ringtoss", "desc": "Toss the rings and land them on the targets to score. Easy for every age." },
+    { "id": "plinko", "name": "Giant Plinko", "group": "giant", "price": 50, "img": "plinko", "desc": "Drop a disc down the board and watch where it lands. Great for fundraisers and prize games." },
+    { "id": "spikeball", "name": "Spikeball", "group": "giant", "price": 50, "img": "spikeball", "desc": "Fast, active team play: bounce the ball off the round net and beat your opponents." },
+    { "id": "laddertoss", "name": "Ladder Toss", "group": "giant", "price": 50, "img": "laddertoss", "desc": "Toss the bolas onto the ladder rungs to score. Easy to learn and great for backyards." },
+    { "id": "croquet", "name": "Croquet", "group": "giant", "price": 60, "img": "croquet", "desc": "The classic lawn game: hit your ball through the hoops and race to the finish." },
+    { "id": "fowling", "name": "Fowling", "group": "giant", "price": 60, "img": "fowling", "desc": "Football meets bowling. Throw the football and knock down as many pins as you can." },
+    { "id": "snakeladder", "name": "Giant Snakes and Ladders", "group": "giant", "price": 75, "img": "snakeladder", "desc": "Roll the dice, climb the ladders and watch out for the snakes, on a mat big enough to stand on." },
+    { "id": "golfpong", "name": "Golf Pong", "group": "giant", "price": 100, "img": "golfpong", "desc": "A twist on classic pong: putt golf balls toward the targets and aim for the highest score." },
+    { "id": "chess", "name": "Giant Chess", "group": "giant", "price": 150, "img": "chess", "desc": "Chess with oversized pieces for parties, outdoor events and school activities." },
+
+    { "id": "arcadebb", "name": "Arcade Basketball", "group": "arcade", "price": 80, "img": "arcadebb", "desc": "A two-player basketball shootout. See who can score the most points before the clock runs out." },
+    { "id": "foosball", "name": "Foosball", "group": "arcade", "price": 80, "img": "foosball", "desc": "Fast-paced table soccer for parties, family gatherings and corporate events." },
+    { "id": "pingpong", "name": "Ping Pong (Table Tennis)", "group": "arcade", "price": 80, "img": "pingpong", "desc": "A table tennis table for rallies and tournaments, indoors or outdoors." },
+
+    { "id": "infl_basketball", "name": "Inflatable Basketball", "group": "inflatable", "price": 180, "img": "infl_basketball", "desc": "Shoot hoops and score points on a giant inflatable court. Perfect for school events and festivals." },
+    { "id": "infl_soccerdart", "name": "Inflatable Soccer Darts", "group": "inflatable", "price": 180, "img": "infl_soccerdart", "desc": "Kick soccer balls at a giant inflatable dartboard and aim for the highest score." },
+    { "id": "infl_connect4", "name": "Inflatable Connect 4", "group": "inflatable", "price": 180, "img": "infl_connect4", "desc": "Connect 4 on a giant inflatable frame. Connect four in a row while blocking your opponent." },
+    { "id": "infl_axe", "name": "Inflatable Axe Throwing", "group": "inflatable", "price": 180, "img": "infl_axe", "desc": "Toss soft, safe throwing axes at an inflatable target. Great for team-building days." },
+
+    { "id": "canopy", "name": "Canopy (10 ft × 10 ft)", "group": "party", "price": 70, "img": "canopy", "desc": "A shaded space for your guests that protects from sun and light weather." },
+    { "id": "table6", "name": "6 ft Party Table", "group": "party", "price": 10, "img": "table6", "desc": "Folding table for food, drinks, gifts, games or guest seating." },
+    { "id": "chair", "name": "Party Chair", "group": "party", "price": 2, "img": "chair", "desc": "Comfortable folding chairs for weddings, birthdays and corporate events." },
+    { "id": "cocktailtable", "name": "Cocktail Table", "group": "party", "price": null, "img": "cocktailtable", "desc": "High round tables where guests can gather, mingle and set down drinks." },
+    { "id": "speaker", "name": "Bluetooth Speaker & Microphones", "group": "party", "price": 30, "img": "speaker", "desc": "Clear sound for music, speeches, announcements, games and karaoke." },
+    { "id": "ledlight", "name": "LED String Lights", "group": "party", "price": 30, "img": "ledlight", "desc": "A warm glow for tents, patios, backyards and evening celebrations." },
+    { "id": "airdancer", "name": "Air Dancer (20 ft)", "group": "party", "price": 100, "img": "airdancer", "desc": "A colourful waving air dancer that makes your event impossible to miss." },
+    { "id": "redcarpet", "name": "Red Carpet & Stanchions", "group": "party", "price": null, "img": "redcarpet", "desc": "A VIP entrance with a red carpet walkway and stanchions." },
+    { "id": "popcorn", "name": "Popcorn Machine", "group": "party", "price": null, "img": "popcorn", "desc": "Fresh popcorn that brings a movie-theatre feel to birthdays and school events." },
+    { "id": "cottoncandy", "name": "Cotton Candy Machine", "group": "party", "price": null, "img": "cottoncandy", "desc": "Fresh, fluffy cotton candy for birthdays, festivals and celebrations." },
+    { "id": "bin", "name": "Party Garbage Bin", "group": "party", "price": null, "img": "bin", "desc": "Keeps your event clean and organised." }
+  ],
+  "extra_quote_options": ["Bouncy Castle", "Photo Booth", "Flower Wall", "Flower Bar", "Decorative Umbrella", "Mini Putt", "Inflatable Screen & Projector"]
+}

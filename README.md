@@ -1,69 +1,38 @@
 # Happy People Rentals
 
-Welcome to **Happy People Rentals**, a platform for renting games in Canada. This repository contains the source code for the project.
+Website for [Happy People Rentals](https://happypeoplerentals.ca), a party and yard game rental business serving Ottawa, Gatineau and surrounding areas.
 
-## Features
-- Browse a wide selection of games available for rent.
-- Easy rental process for customers.
-- Manage inventory and rental records efficiently.
+## How it's built
 
-## Technologies Used
-- [Insert programming language/framework here, e.g., Python, Node.js, React, etc.]
-- [Insert database technology, e.g., MySQL, MongoDB, etc.]
-- [Other tools or libraries used]
+- Plain HTML pages, one shared stylesheet (`site.css`) and a small script (`site.js`). No framework, no database.
+- Pages live at the same addresses as the WordPress site they replace (for example `/giant-games/`), so existing Google rankings carry over.
+- `send-form.php` emails the quote and contact forms (PHP `mail()` on Hostinger).
+- `.htaccess` redirects old WordPress addresses, forces `https://happypeoplerentals.ca`, and sets caching.
 
-## Getting Started
+Each page includes its own title, meta description, canonical URL, Open Graph tags and schema.org structured data (LocalBusiness, Service with prices, BreadcrumbList and FAQPage).
 
-### Prerequisites
-- [List any prerequisites, e.g., Node.js, Python, etc.]
-- [How to install them]
+## Editing
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/seunboy1/Happypeoplerentals.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd Happypeoplerentals
-   ```
-3. Install dependencies:
-   ```bash
-   [Insert command, e.g., npm install, pip install -r requirements.txt, etc.]
-   ```
+Page text, prices and photos are kept in `src/`:
 
-### Running the Application
-1. Start the application:
-   ```bash
-   [Insert command to run the app, e.g., npm start, python app.py, etc.]
-   ```
-2. Open your browser and navigate to:
-   ```
-   http://localhost:[Insert port, e.g., 3000, 8000, etc.]
-   ```
+| File | What it holds |
+| --- | --- |
+| `src/catalog.json` | Every rental item with its price, description and photo |
+| `src/pages/*.html` | Each page's text, Google title and description |
+| `src/images.json` | Photo file names and alt text |
 
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature-name"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
+After changing anything in `src/`, rebuild the pages (Python 3, standard library only):
+
+```bash
+python3 tools/build.py
+```
+
+This regenerates the HTML pages, `sitemap.xml` and `robots.txt`.
+
+## Deploying
+
+See `README.txt` for the list of files to upload to Hostinger and the steps for replacing the WordPress site.
 
 ## License
-This project is licensed under the [Insert License Name, e.g., MIT License]. See the `LICENSE` file for details.
 
-## Contact
-For questions or support, please contact:
-- **Name**: [Your Name]
-- **Email**: [Your Email]
-- **GitHub**: [https://github.com/seunboy1](https://github.com/seunboy1)
+See `LICENSE`.

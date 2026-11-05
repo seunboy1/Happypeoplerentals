@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /src/
+Disallow: /tools/
+Disallow: /send-form.php
+
+Sitemap: https://happypeoplerentals.ca/sitemap.xml

@@ -1,0 +1,78 @@
+<!--
+{
+  "path": "/get-a-quote/",
+  "title": "Get a Free Party Rental Quote | Happy People Rentals",
+  "description": "Tell us your date, location and guest count and we'll send a free, no-obligation quote for games and party rentals in Ottawa and Gatineau.",
+  "crumb": "Get a Free Quote",
+  "pagetype": "ContactPage",
+  "image": "hero"
+}
+-->
+<section class="section" style="padding-top:clamp(32px,5vw,64px);">
+  <div class="wrap split">
+    <div class="stack" style="gap:24px;">
+      <h1 class="display d-1">Get your free quote</h1>
+      <p class="lede muted">Planning an event? Tell us a few details and we'll prepare a personalized quote with the best games and party rentals for it. Fast, easy and no obligation.</p>
+      <ul class="ticks" style="font-size:17px;">
+        <li>Delivery and setup across Ottawa, Gatineau and nearby towns</li>
+        <li>Rent one game for a backyard or a full lineup for a festival</li>
+        <li>Clean equipment, checked before every event</li>
+      </ul>
+      <p style="font-weight:700;">Prefer to talk? <a href="tel:{{tel}}" class="link">{{phone}}</a></p>
+      <div class="photo">{{img:hero}}</div>
+    </div>
+
+    <div class="form-card">
+      <div class="done" data-done hidden tabindex="-1">
+        <h2 class="display d-2">Request sent</h2>
+        <p class="muted">Thanks. We have your details and will reply with a quote by email.</p>
+        <a href="/rental-catalog/" class="btn btn--line" style="align-self:flex-start;">Keep browsing</a>
+      </div>
+      <form class="form" action="/send-form.php" method="post" data-form>
+        <input type="hidden" name="form" value="Quote request">
+        <fieldset>
+          <legend>Your event</legend>
+          <div class="fields">
+            <div class="field"><label for="q-date">Event date</label><input id="q-date" name="date" type="date"></div>
+            <div class="field"><label for="q-type">Event type</label>
+              <select id="q-type" name="type">
+                <option>Birthday</option><option>Wedding</option><option>Baby or bridal shower</option><option>Corporate event</option><option>School event</option>
+                <option>Church or community event</option><option>Festival or carnival</option><option>Family gathering</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="q-guests">Guests</label>
+              <select id="q-guests" name="guests"><option>Under 25</option><option>25–75</option><option>75–150</option><option>150+</option></select>
+            </div>
+            <div class="field"><label for="q-pack">Package</label>
+              <select id="q-pack" name="package">
+                <option>Not sure yet, suggest something</option><option>The Backyard</option><option>The Block Party</option>
+                <option>The Field Day</option><option>Individual items only</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="q-location">Where is it?</label><input id="q-location" name="location" type="text" placeholder="Neighbourhood or venue in Ottawa / Gatineau"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Games &amp; extras</legend>
+          {{chips}}
+          <div class="field"><label for="q-notes">Anything else we should know</label><textarea id="q-notes" name="notes" rows="4" placeholder="Start time, grass or pavement, power access, indoor backup"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="fields">
+            <div class="field"><label for="q-name">Your name</label><input id="q-name" name="name" type="text" required autocomplete="name"></div>
+            <div class="field"><label for="q-email">Email</label><input id="q-email" name="email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+        </fieldset>
+
+        <input id="q-company" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot">
+        <p class="form-error" data-error hidden>Your request couldn't be sent. Please call or text {{phone}}, or email {{email}}.</p>
+        <button type="submit" class="btn btn--yellow" style="padding:18px 24px; font-size:17px;" data-label="Send my request">Send my request</button>
+        <p class="form-note">We only use your details to reply to this request.</p>
+      </form>
+    </div>
+  </div>
+</section>

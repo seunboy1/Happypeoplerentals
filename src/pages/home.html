@@ -1,0 +1,126 @@
+<!--
+{
+  "path": "/",
+  "title": "Yard Game & Party Rentals in Ottawa | Happy People Rentals",
+  "description": "Giant yard games, inflatables, photo booths, tables and chairs for rent in Ottawa and Gatineau. We deliver and set up. Get a free quote.",
+  "overlay": true,
+  "image": "hero",
+  "preload": "hero"
+}
+-->
+<section class="hero">
+  <div class="hero__media">
+    <video autoplay muted loop playsinline preload="metadata" poster="/images/hero-yard-games-party-ottawa.webp" aria-hidden="true">
+      <source src="/media/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__shade"></div>
+  <div class="hero__inner">
+    <h1 class="display d-hero">Yard game &amp; party rentals in <span class="hl">Ottawa</span> &amp; Gatineau</h1>
+    <div class="hero__foot">
+      <div class="stack" style="gap:22px;">
+        <p>Bringing fun to every event. Giant games, inflatables, bouncy castles, photo booths, tables and chairs for birthdays, weddings, corporate, school and community events.</p>
+        <div class="btn-row">
+          <a href="/get-a-quote/" class="btn btn--yellow">Get a free quote <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="/rental-catalog/" class="btn btn--ghost">See all rentals</a>
+        </div>
+      </div>
+      <p class="hero__events">Birthdays · weddings · school fun days<br>corporate events · church events · festivals</p>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="facts__grid" style="max-width:var(--max); margin:0 auto;">
+    <div class="facts__item"><b>Delivered &amp; set up</b>Clean equipment brought to your event</div>
+    <div class="facts__item"><b>Ottawa · Gatineau</b>Kanata, Orléans, Barrhaven, Nepean and nearby</div>
+    <div class="facts__item"><b>Free quote</b>Call or text <a href="tel:{{tel}}" style="color:#fff; font-weight:700;">{{phone}}</a></div>
+  </div>
+</div>
+
+<section class="section" id="popular">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display d-1">Our most popular rentals</h2>
+      <a href="/rental-catalog/" class="link">See the full rental catalog →</a>
+    </div>
+    {{cards:ids:connect4,jenga,cornhole,laddertoss}}
+  </div>
+</section>
+
+<section class="section section--chalk" id="rentals">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display d-1">Everything you can rent</h2>
+      <p class="lede muted">Over 30 games and event items. Pick a category to see prices and photos.</p>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="/giant-games/"><div class="tile__photo">{{img:g_connect4}}</div><div class="tile__body"><h3 class="display d-3">Giant &amp; yard games</h3><p>Connect 4, Jenga, cornhole, Plinko, chess and more, from $50.</p></div></a>
+      <a class="tile" href="/inflatable-games/"><div class="tile__photo">{{img:infl_basketball}}</div><div class="tile__body"><h3 class="display d-3">Inflatable games</h3><p>Basketball, soccer darts, Connect 4 and axe throwing, $180 each.</p></div></a>
+      <a class="tile" href="/bouncy-castle/"><div class="tile__photo">{{img:bouncy}}</div><div class="tile__body"><h3 class="display d-3">Bouncy castle</h3><p>A colourful castle for birthdays, school days and festivals.</p></div></a>
+      <a class="tile" href="/photo-booth/"><div class="tile__photo">{{img:booth_wedding}}</div><div class="tile__body"><h3 class="display d-3">Photo booth &amp; flower walls</h3><p>Fun photos and beautiful backdrops for weddings and parties.</p></div></a>
+      <a class="tile" href="/flower-bar/"><div class="tile__photo">{{img:flowerbar_umbrella}}</div><div class="tile__body"><h3 class="display d-3">Flower bar</h3><p>Guests build their own bouquets to take home.</p></div></a>
+      <a class="tile" href="/tables-chairs-for-every-celebration/"><div class="tile__photo">{{img:tables_hero}}</div><div class="tile__body"><h3 class="display d-3">Tables, chairs &amp; canopies</h3><p>Chairs from $2, 6 ft tables from $10, canopies from $70.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display d-1">How renting works</h2>
+      <p class="lede muted">We serve Ottawa, Gatineau and the surrounding area.</p>
+    </div>
+    <ol class="steps" style="list-style:none; margin:0; padding:0;">
+      <li class="step"><span class="step__num" aria-hidden="true">1</span><h3 class="display d-3">Pick your rentals</h3><p class="muted">Browse the catalog, or tell us your crowd and space and we'll suggest a mix.</p></li>
+      <li class="step"><span class="step__num" aria-hidden="true">2</span><h3 class="display d-3">Get a free quote</h3><p class="muted">Send your date, location and guest count. The quote is free with no obligation.</p></li>
+      <li class="step"><span class="step__num" aria-hidden="true">3</span><h3 class="display d-3">We deliver and set up</h3><p class="muted">Clean equipment arrives at your event, ready for your guests to play.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--ink" id="clients">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display d-1" style="max-width:16ch;">Trusted by organizations across Ottawa</h2>
+      <p class="lede muted">We've supplied games and event rentals to companies, not-for-profits, sports clubs, festivals, schools and community groups.</p>
+    </div>
+    {{logos}}
+  </div>
+</section>
+
+<section class="section" id="occasions">
+  <div class="wrap split">
+    <div class="stack" style="gap:18px;">
+      <h2 class="display d-1">Perfect for every occasion</h2>
+      <p class="lede muted">Our games and rentals entertain children, families, friends, colleagues and guests of all ages.</p>
+      <div class="btn-row">
+        <a href="/gallery/" class="btn btn--line">See event photos</a>
+        <a href="{{review}}" class="btn btn--yellow" rel="noopener">Read or leave a Google review</a>
+      </div>
+    </div>
+    <ul class="ticks" style="font-size:17px;">
+      <li>Birthday parties and backyard celebrations</li>
+      <li>Weddings, bridal showers and baby showers</li>
+      <li>Corporate events, staff picnics and team building</li>
+      <li>School fun days, graduations and field days</li>
+      <li>Church events and family days</li>
+      <li>Community festivals, carnivals and fundraisers</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band" id="quote">
+  <div class="wrap cta-band__grid">
+    <div class="cta-band__copy">
+      <h2 class="display d-1">Book your games for the weekend.</h2>
+      <p class="lede">Tell us the date, the place and how many people are coming, and we'll send you a free quote.</p>
+      <div class="btn-row">
+        <a href="/get-a-quote/" class="btn btn--ink">Request a quote <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="/packages/" class="btn btn--line">See packages</a>
+      </div>
+      <a href="tel:{{tel}}" class="cta-band__phone">{{phone}}</a>
+    </div>
+    {{board}}
+  </div>
+</section>

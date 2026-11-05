@@ -1,0 +1,663 @@
+{
+ "logo": {
+  "file": "happy-people-rentals-logo.png",
+  "alt": "Happy People Rentals logo",
+  "w": 512,
+  "h": 205,
+  "kind": "logo"
+ },
+ "cornhole": {
+  "file": "cornhole-rental-ottawa.webp",
+  "alt": "Cornhole boards and bean bags for rent",
+  "w": 1000,
+  "h": 1090,
+  "kind": "photo",
+  "small": "cornhole-rental-ottawa-500.webp"
+ },
+ "connect4": {
+  "file": "giant-connect-4-rental-ottawa.webp",
+  "alt": "Giant Connect 4 game for rent",
+  "w": 1000,
+  "h": 988,
+  "kind": "photo",
+  "small": "giant-connect-4-rental-ottawa-500.webp"
+ },
+ "jenga": {
+  "file": "giant-jenga-rental-ottawa.webp",
+  "alt": "Giant Jenga tower for rent",
+  "w": 1000,
+  "h": 750,
+  "kind": "photo",
+  "small": "giant-jenga-rental-ottawa-500.webp"
+ },
+ "guesswho": {
+  "file": "giant-guess-who-rental-ottawa.webp",
+  "alt": "Giant Guess Who game for rent",
+  "w": 1000,
+  "h": 1046,
+  "kind": "photo",
+  "small": "giant-guess-who-rental-ottawa-500.webp"
+ },
+ "axethrow": {
+  "file": "axe-throw-game-rental-ottawa.webp",
+  "alt": "Axe throw target game for rent",
+  "w": 1000,
+  "h": 1101,
+  "kind": "photo",
+  "small": "axe-throw-game-rental-ottawa-500.webp"
+ },
+ "kanjam": {
+  "file": "kan-jam-rental-ottawa.webp",
+  "alt": "Kan Jam disc game for rent",
+  "w": 1000,
+  "h": 858,
+  "kind": "photo",
+  "small": "kan-jam-rental-ottawa-500.webp"
+ },
+ "tetris": {
+  "file": "giant-tetris-rental-ottawa.webp",
+  "alt": "Giant Tetris stacking game for rent",
+  "w": 1000,
+  "h": 1145,
+  "kind": "photo",
+  "small": "giant-tetris-rental-ottawa-500.webp"
+ },
+ "kerplunk": {
+  "file": "giant-kerplunk-rental-ottawa.webp",
+  "alt": "Giant Kerplunk game for rent",
+  "w": 1000,
+  "h": 1263,
+  "kind": "photo",
+  "small": "giant-kerplunk-rental-ottawa-500.webp"
+ },
+ "ringtoss": {
+  "file": "ring-toss-rental-ottawa.webp",
+  "alt": "Ring toss game for rent",
+  "w": 1000,
+  "h": 891,
+  "kind": "photo",
+  "small": "ring-toss-rental-ottawa-500.webp"
+ },
+ "plinko": {
+  "file": "giant-plinko-rental-ottawa.webp",
+  "alt": "Giant Plinko board for rent",
+  "w": 1000,
+  "h": 1333,
+  "kind": "photo",
+  "small": "giant-plinko-rental-ottawa-500.webp"
+ },
+ "spikeball": {
+  "file": "spikeball-rental-ottawa.webp",
+  "alt": "Spikeball set for rent",
+  "w": 1000,
+  "h": 725,
+  "kind": "photo",
+  "small": "spikeball-rental-ottawa-500.webp"
+ },
+ "laddertoss": {
+  "file": "ladder-toss-rental-ottawa.webp",
+  "alt": "Ladder toss game for rent",
+  "w": 1000,
+  "h": 1245,
+  "kind": "photo",
+  "small": "ladder-toss-rental-ottawa-500.webp"
+ },
+ "arcadebb": {
+  "file": "arcade-basketball-rental-ottawa.webp",
+  "alt": "Arcade basketball machine for rent",
+  "w": 966,
+  "h": 1242,
+  "kind": "photo",
+  "small": "arcade-basketball-rental-ottawa-500.webp"
+ },
+ "foosball": {
+  "file": "foosball-table-rental-ottawa.webp",
+  "alt": "Foosball table for rent",
+  "w": 1000,
+  "h": 1005,
+  "kind": "photo",
+  "small": "foosball-table-rental-ottawa-500.webp"
+ },
+ "pingpong": {
+  "file": "ping-pong-table-rental-ottawa.webp",
+  "alt": "Ping pong table for rent",
+  "w": 1000,
+  "h": 895,
+  "kind": "photo",
+  "small": "ping-pong-table-rental-ottawa-500.webp"
+ },
+ "golfpong": {
+  "file": "golf-pong-rental-ottawa.webp",
+  "alt": "Golf pong game for rent",
+  "w": 1000,
+  "h": 998,
+  "kind": "photo",
+  "small": "golf-pong-rental-ottawa-500.webp"
+ },
+ "chess": {
+  "file": "giant-chess-rental-ottawa.webp",
+  "alt": "Giant chess set for rent",
+  "w": 1000,
+  "h": 602,
+  "kind": "photo",
+  "small": "giant-chess-rental-ottawa-500.webp"
+ },
+ "snakeladder": {
+  "file": "giant-snakes-and-ladders-rental-ottawa.webp",
+  "alt": "Giant snakes and ladders game for rent",
+  "w": 1000,
+  "h": 667,
+  "kind": "photo",
+  "small": "giant-snakes-and-ladders-rental-ottawa-500.webp"
+ },
+ "croquet": {
+  "file": "croquet-set-rental-ottawa.webp",
+  "alt": "Croquet set for rent",
+  "w": 1000,
+  "h": 1581,
+  "kind": "photo",
+  "small": "croquet-set-rental-ottawa-500.webp"
+ },
+ "fowling": {
+  "file": "fowling-game-rental-ottawa.webp",
+  "alt": "Fowling football and bowling game for rent",
+  "w": 1000,
+  "h": 869,
+  "kind": "photo",
+  "small": "fowling-game-rental-ottawa-500.webp"
+ },
+ "canopy": {
+  "file": "canopy-tent-rental-ottawa.webp",
+  "alt": "10 by 10 foot canopy tent for rent",
+  "w": 1000,
+  "h": 1119,
+  "kind": "photo",
+  "small": "canopy-tent-rental-ottawa-500.webp"
+ },
+ "redcarpet": {
+  "file": "red-carpet-stanchions-rental-ottawa.webp",
+  "alt": "Red carpet and stanchions for rent",
+  "w": 1000,
+  "h": 1537,
+  "kind": "photo",
+  "small": "red-carpet-stanchions-rental-ottawa-500.webp"
+ },
+ "table6": {
+  "file": "six-foot-party-table-rental-ottawa.webp",
+  "alt": "6 foot folding party table for rent",
+  "w": 1000,
+  "h": 1027,
+  "kind": "photo",
+  "small": "six-foot-party-table-rental-ottawa-500.webp"
+ },
+ "chair": {
+  "file": "party-chair-rental-ottawa.webp",
+  "alt": "Folding party chair for rent",
+  "w": 1000,
+  "h": 1288,
+  "kind": "photo",
+  "small": "party-chair-rental-ottawa-500.webp"
+ },
+ "speaker": {
+  "file": "bluetooth-speaker-microphone-rental-ottawa.webp",
+  "alt": "Bluetooth speaker and microphones for rent",
+  "w": 1000,
+  "h": 1339,
+  "kind": "photo",
+  "small": "bluetooth-speaker-microphone-rental-ottawa-500.webp"
+ },
+ "ledlight": {
+  "file": "led-string-lights-rental-ottawa.webp",
+  "alt": "LED string lights for rent",
+  "w": 1000,
+  "h": 843,
+  "kind": "photo",
+  "small": "led-string-lights-rental-ottawa-500.webp"
+ },
+ "airdancer": {
+  "file": "air-dancer-rental-ottawa.webp",
+  "alt": "20 foot air dancer for rent",
+  "w": 1000,
+  "h": 1198,
+  "kind": "photo",
+  "small": "air-dancer-rental-ottawa-500.webp"
+ },
+ "popcorn": {
+  "file": "popcorn-machine-rental-ottawa.webp",
+  "alt": "Popcorn machine for rent",
+  "w": 1000,
+  "h": 1319,
+  "kind": "photo",
+  "small": "popcorn-machine-rental-ottawa-500.webp"
+ },
+ "cottoncandy": {
+  "file": "cotton-candy-machine-rental-ottawa.webp",
+  "alt": "Cotton candy machine for rent",
+  "w": 1000,
+  "h": 1328,
+  "kind": "photo",
+  "small": "cotton-candy-machine-rental-ottawa-500.webp"
+ },
+ "cocktailtable": {
+  "file": "cocktail-table-rental-ottawa.webp",
+  "alt": "Cocktail table for rent",
+  "w": 1000,
+  "h": 1419,
+  "kind": "photo",
+  "small": "cocktail-table-rental-ottawa-500.webp"
+ },
+ "bin": {
+  "file": "party-garbage-bin-rental-ottawa.webp",
+  "alt": "Party garbage bin for rent",
+  "w": 1000,
+  "h": 1191,
+  "kind": "photo",
+  "small": "party-garbage-bin-rental-ottawa-500.webp"
+ },
+ "infl_basketball": {
+  "file": "inflatable-basketball-game-rental-ottawa.webp",
+  "alt": "Inflatable basketball game for rent",
+  "w": 1000,
+  "h": 1023,
+  "kind": "photo",
+  "small": "inflatable-basketball-game-rental-ottawa-500.webp"
+ },
+ "infl_soccerdart": {
+  "file": "inflatable-soccer-darts-rental-ottawa.webp",
+  "alt": "Inflatable soccer dart board game for rent",
+  "w": 1000,
+  "h": 1014,
+  "kind": "photo",
+  "small": "inflatable-soccer-darts-rental-ottawa-500.webp"
+ },
+ "infl_connect4": {
+  "file": "inflatable-connect-4-rental-ottawa.webp",
+  "alt": "Inflatable Connect 4 game for rent",
+  "w": 786,
+  "h": 666,
+  "kind": "photo",
+  "small": "inflatable-connect-4-rental-ottawa-500.webp"
+ },
+ "infl_axe": {
+  "file": "inflatable-axe-throw-rental-ottawa.webp",
+  "alt": "Inflatable axe throwing game for rent",
+  "w": 1000,
+  "h": 984,
+  "kind": "photo",
+  "small": "inflatable-axe-throw-rental-ottawa-500.webp"
+ },
+ "bouncy": {
+  "file": "bouncy-castle-rental-ottawa.webp",
+  "alt": "Colourful bouncy castle for rent",
+  "w": 1000,
+  "h": 1033,
+  "kind": "photo",
+  "small": "bouncy-castle-rental-ottawa-500.webp"
+ },
+ "booth": {
+  "file": "photo-booth-rental-ottawa.webp",
+  "alt": "Photo booth set up for an event",
+  "w": 1000,
+  "h": 1041,
+  "kind": "photo",
+  "small": "photo-booth-rental-ottawa-500.webp"
+ },
+ "booth_birthday": {
+  "file": "photo-booth-birthday-party-ottawa.webp",
+  "alt": "Photo booth at a birthday party",
+  "w": 1000,
+  "h": 1030,
+  "kind": "photo",
+  "small": "photo-booth-birthday-party-ottawa-500.webp"
+ },
+ "booth_wedding": {
+  "file": "photo-booth-wedding-ottawa.webp",
+  "alt": "Photo booth at a wedding",
+  "w": 1000,
+  "h": 1022,
+  "kind": "photo",
+  "small": "photo-booth-wedding-ottawa-500.webp"
+ },
+ "booth_corporate": {
+  "file": "photo-booth-corporate-event-ottawa.webp",
+  "alt": "Photo booth at a corporate event",
+  "w": 768,
+  "h": 1024,
+  "kind": "photo",
+  "small": "photo-booth-corporate-event-ottawa-500.webp"
+ },
+ "booth_party": {
+  "file": "photo-booth-party-rental-ottawa.webp",
+  "alt": "Photo booth at a party",
+  "w": 1000,
+  "h": 1019,
+  "kind": "photo",
+  "small": "photo-booth-party-rental-ottawa-500.webp"
+ },
+ "flowerwall1": {
+  "file": "flower-wall-rental-ottawa.webp",
+  "alt": "Flower wall backdrop for rent",
+  "w": 1000,
+  "h": 1113,
+  "kind": "photo",
+  "small": "flower-wall-rental-ottawa-500.webp"
+ },
+ "flowerwall2": {
+  "file": "flower-wall-birthday-wedding-bridal-shower.webp",
+  "alt": "Flower wall backdrop for a birthday, wedding or bridal shower",
+  "w": 1000,
+  "h": 974,
+  "kind": "photo",
+  "small": "flower-wall-birthday-wedding-bridal-shower-500.webp"
+ },
+ "flowerwall3": {
+  "file": "flower-wall-baby-shower-corporate-event.webp",
+  "alt": "Flower wall backdrop for a baby shower or corporate event",
+  "w": 1000,
+  "h": 1004,
+  "kind": "photo",
+  "small": "flower-wall-baby-shower-corporate-event-500.webp"
+ },
+ "flowerwall4": {
+  "file": "flower-wall-and-photo-booth-rental.webp",
+  "alt": "Flower wall with photo booth",
+  "w": 1000,
+  "h": 1030,
+  "kind": "photo",
+  "small": "flower-wall-and-photo-booth-rental-500.webp"
+ },
+ "flowerbar": {
+  "file": "flower-bar-rental-ottawa.webp",
+  "alt": "Flower bar where guests make their own bouquets",
+  "w": 997,
+  "h": 1600,
+  "kind": "photo",
+  "small": "flower-bar-rental-ottawa-500.webp"
+ },
+ "umbrella1": {
+  "file": "decorative-umbrella-rental-ottawa.webp",
+  "alt": "Decorative umbrella for weddings and baby showers",
+  "w": 1000,
+  "h": 1511,
+  "kind": "photo",
+  "small": "decorative-umbrella-rental-ottawa-500.webp"
+ },
+ "flowerbar_umbrella": {
+  "file": "flower-bar-and-umbrella-rental.webp",
+  "alt": "Flower bar with decorative umbrella",
+  "w": 1000,
+  "h": 1500,
+  "kind": "photo",
+  "small": "flower-bar-and-umbrella-rental-500.webp"
+ },
+ "umbrella2": {
+  "file": "party-umbrella-rental-ottawa.webp",
+  "alt": "Decorative umbrella set up at a party",
+  "w": 1000,
+  "h": 972,
+  "kind": "photo",
+  "small": "party-umbrella-rental-ottawa-500.webp"
+ },
+ "umbrella3": {
+  "file": "umbrella-decor-rental-ottawa.webp",
+  "alt": "Decorative event umbrella",
+  "w": 1000,
+  "h": 1250,
+  "kind": "photo",
+  "small": "umbrella-decor-rental-ottawa-500.webp"
+ },
+ "tables_hero": {
+  "file": "tables-and-chairs-rental-ottawa.webp",
+  "alt": "Tables and chairs set up for an event",
+  "w": 1000,
+  "h": 667,
+  "kind": "photo",
+  "small": "tables-and-chairs-rental-ottawa-500.webp"
+ },
+ "chair_white1": {
+  "file": "white-folding-chairs-rental-ottawa.webp",
+  "alt": "White folding chairs for rent",
+  "w": 1000,
+  "h": 1288,
+  "kind": "photo",
+  "small": "white-folding-chairs-rental-ottawa-500.webp"
+ },
+ "chair_white2": {
+  "file": "white-foldable-chairs-event-ottawa.webp",
+  "alt": "White foldable chairs set up for an event",
+  "w": 1000,
+  "h": 865,
+  "kind": "photo",
+  "small": "white-foldable-chairs-event-ottawa-500.webp"
+ },
+ "chair_black": {
+  "file": "black-folding-chairs-rental-ottawa.webp",
+  "alt": "Black folding chairs for rent",
+  "w": 900,
+  "h": 1558,
+  "kind": "photo",
+  "small": "black-folding-chairs-rental-ottawa-500.webp"
+ },
+ "table_6ft": {
+  "file": "six-foot-tables-rental-ottawa.webp",
+  "alt": "6 foot folding tables for rent",
+  "w": 1000,
+  "h": 935,
+  "kind": "photo",
+  "small": "six-foot-tables-rental-ottawa-500.webp"
+ },
+ "table_cocktail": {
+  "file": "cocktail-party-tables-rental-ottawa.webp",
+  "alt": "Cocktail party tables for rent",
+  "w": 1000,
+  "h": 1419,
+  "kind": "photo",
+  "small": "cocktail-party-tables-rental-ottawa-500.webp"
+ },
+ "g_pingpong": {
+  "file": "ping-pong-at-family-event.webp",
+  "alt": "Guests playing ping pong at a family event",
+  "w": 1000,
+  "h": 803,
+  "kind": "photo",
+  "small": "ping-pong-at-family-event-500.webp"
+ },
+ "g_laddertoss": {
+  "file": "ladder-toss-at-family-event.webp",
+  "alt": "Ladder toss set up at a family event",
+  "w": 1000,
+  "h": 881,
+  "kind": "photo",
+  "small": "ladder-toss-at-family-event-500.webp"
+ },
+ "g_axethrow": {
+  "file": "axe-throw-at-family-event.webp",
+  "alt": "Axe throw game at a family event",
+  "w": 1000,
+  "h": 1009,
+  "kind": "photo",
+  "small": "axe-throw-at-family-event-500.webp"
+ },
+ "g_guesswho": {
+  "file": "giant-guess-who-at-family-event.webp",
+  "alt": "Giant Guess Who at a family event",
+  "w": 999,
+  "h": 1104,
+  "kind": "photo",
+  "small": "giant-guess-who-at-family-event-500.webp"
+ },
+ "g_tetris": {
+  "file": "giant-tetris-at-family-event.webp",
+  "alt": "Giant Tetris at a family event",
+  "w": 1000,
+  "h": 1124,
+  "kind": "photo",
+  "small": "giant-tetris-at-family-event-500.webp"
+ },
+ "g_games": {
+  "file": "giant-plinko-at-family-event.webp",
+  "alt": "Giant Plinko board at a family event",
+  "w": 926,
+  "h": 1216,
+  "kind": "photo",
+  "small": "giant-plinko-at-family-event-500.webp"
+ },
+ "g_kerplunk": {
+  "file": "giant-kerplunk-at-family-event.webp",
+  "alt": "Giant Kerplunk at a family event",
+  "w": 1000,
+  "h": 1167,
+  "kind": "photo",
+  "small": "giant-kerplunk-at-family-event-500.webp"
+ },
+ "g_connect4": {
+  "file": "giant-connect-4-at-family-event.webp",
+  "alt": "Giant Connect 4 at a family event",
+  "w": 1000,
+  "h": 919,
+  "kind": "photo",
+  "small": "giant-connect-4-at-family-event-500.webp"
+ },
+ "c_kanjam": {
+  "file": "kan-jam-corporate-event.webp",
+  "alt": "Kan Jam at a special event",
+  "w": 1000,
+  "h": 667,
+  "kind": "photo",
+  "small": "kan-jam-corporate-event-500.webp"
+ },
+ "c_golfpong": {
+  "file": "golf-pong-corporate-event.webp",
+  "alt": "Golf pong at a corporate event",
+  "w": 1000,
+  "h": 667,
+  "kind": "photo",
+  "small": "golf-pong-corporate-event-500.webp"
+ },
+ "c_spikeball": {
+  "file": "spikeball-special-event.webp",
+  "alt": "Spikeball at a special event",
+  "w": 1000,
+  "h": 946,
+  "kind": "photo",
+  "small": "spikeball-special-event-500.webp"
+ },
+ "c_axethrow": {
+  "file": "axe-throw-team-building.webp",
+  "alt": "Axe throw at a team-building event",
+  "w": 1000,
+  "h": 1000,
+  "kind": "photo",
+  "small": "axe-throw-team-building-500.webp"
+ },
+ "c_miniputt": {
+  "file": "mini-putt-special-event.webp",
+  "alt": "Mini putt at a special event",
+  "w": 1000,
+  "h": 1133,
+  "kind": "photo",
+  "small": "mini-putt-special-event-500.webp"
+ },
+ "c_laddertoss": {
+  "file": "ladder-toss-special-event.webp",
+  "alt": "Ladder toss at a special event",
+  "w": 1000,
+  "h": 881,
+  "kind": "photo",
+  "small": "ladder-toss-special-event-500.webp"
+ },
+ "c_cornhole": {
+  "file": "cornhole-corporate-team-building.webp",
+  "alt": "Cornhole at a corporate team-building event",
+  "w": 1000,
+  "h": 667,
+  "kind": "photo",
+  "small": "cornhole-corporate-team-building-500.webp"
+ },
+ "c_tetris": {
+  "file": "giant-tetris-corporate-event.webp",
+  "alt": "Giant Tetris at a corporate event",
+  "w": 1000,
+  "h": 1147,
+  "kind": "photo",
+  "small": "giant-tetris-corporate-event-500.webp"
+ },
+ "cl_winners": {
+  "file": "client-winners-chapel-international.webp",
+  "alt": "Winners Chapel International logo",
+  "w": 347,
+  "h": 342,
+  "kind": "clientlogo"
+ },
+ "cl_rapid": {
+  "file": "client-ottawa-rapid-fc.webp",
+  "alt": "Ottawa Rapid FC logo",
+  "w": 352,
+  "h": 339,
+  "kind": "clientlogo"
+ },
+ "cl_ghana": {
+  "file": "client-ghana-association-of-ottawa.webp",
+  "alt": "Ghana Association of Ottawa logo",
+  "w": 355,
+  "h": 319,
+  "kind": "clientlogo"
+ },
+ "cl_ecao": {
+  "file": "client-ethiopian-community-association-ottawa.webp",
+  "alt": "Ethiopian Community Association of Ottawa logo",
+  "w": 360,
+  "h": 203,
+  "kind": "clientlogo"
+ },
+ "cl_african_fest": {
+  "file": "client-african-festival-ottawa.webp",
+  "alt": "African Festival Ottawa logo",
+  "w": 360,
+  "h": 270,
+  "kind": "clientlogo"
+ },
+ "cl_acao": {
+  "file": "client-african-canadian-association-of-ottawa.webp",
+  "alt": "African Canadian Association of Ottawa logo",
+  "w": 360,
+  "h": 378,
+  "kind": "clientlogo"
+ },
+ "cl_mpp": {
+  "file": "client-mpp-carleton.webp",
+  "alt": "MPP Carleton logo",
+  "w": 360,
+  "h": 74,
+  "kind": "clientlogo"
+ },
+ "cl_rvca": {
+  "file": "client-rideau-valley-conservation-authority.webp",
+  "alt": "Rideau Valley Conservation Authority logo",
+  "w": 360,
+  "h": 246,
+  "kind": "clientlogo"
+ },
+ "cl_afrofest": {
+  "file": "client-afrofest-ottawa.webp",
+  "alt": "Afrofest Ottawa logo",
+  "w": 340,
+  "h": 345,
+  "kind": "clientlogo"
+ },
+ "cl_nrocrc": {
+  "file": "client-community-resource-centre.webp",
+  "alt": "Community Resource Centre logo",
+  "w": 360,
+  "h": 398,
+  "kind": "clientlogo"
+ },
+ "hero": {
+  "file": "hero-yard-games-party-ottawa.webp",
+  "alt": "Friends playing Giant Jenga, Giant Connect 4 and cornhole on a sunny lawn",
+  "w": 1248,
+  "h": 592,
+  "kind": "photo",
+  "small": "hero-yard-games-party-ottawa-500.webp"
+ }
+}
