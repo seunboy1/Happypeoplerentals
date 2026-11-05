@@ -11,6 +11,7 @@
 -->
 <header class="page-head">
   <div class="wrap">
+    <span class="eyebrow">Rental catalog</span>
     <h1 class="display d-1">Party rental catalog</h1>
     <p class="lede">Giant yard games, arcade games, inflatables, tables, chairs, canopies and other event essentials. Choose your favourites, then request a free quote for your event.</p>
     <nav class="jump" aria-label="Sections on this page">
@@ -24,7 +25,7 @@
 </header>
 
 <section class="section" id="giant">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Giant &amp; yard games</h2>
       <a href="/giant-games/" class="link">More about giant games →</a>
@@ -34,14 +35,14 @@
 </section>
 
 <section class="section section--chalk" id="arcade">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head"><h2 class="display d-2">Arcade &amp; table games</h2></div>
     {{cards:group:arcade}}
   </div>
 </section>
 
 <section class="section" id="inflatable">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Inflatable games</h2>
       <a href="/inflatable-games/" class="link">More about inflatable games →</a>
@@ -51,7 +52,7 @@
 </section>
 
 <section class="section section--chalk" id="party">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Party &amp; event items</h2>
       <a href="/tables-chairs-for-every-celebration/" class="link">More about tables &amp; chairs →</a>
@@ -61,7 +62,7 @@
 </section>
 
 <section class="section" id="more">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head"><h2 class="display d-2">Bouncy castle, photo booth &amp; more</h2></div>
     <div class="tiles">
       <a class="tile" href="/bouncy-castle/"><div class="tile__photo">{{img:bouncy}}</div><div class="tile__body"><h3 class="display d-3">Bouncy castle</h3><p>Hours of bouncing fun for kids.</p></div></a>
@@ -72,8 +73,9 @@
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap" style="padding-block:clamp(48px,7vw,88px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-box" data-reveal>
     <div class="stack" style="max-width:620px;">
       <h2 class="display d-2">Found what you need?</h2>
       <p class="lede">Send us your list and event details. We'll reply with a free, no-obligation quote.</p>
@@ -82,5 +84,8 @@
       <a href="/get-a-quote/" class="btn btn--ink">Get a free quote</a>
       <a href="tel:{{tel}}" class="btn btn--line">Call {{phone}}</a>
     </div>
+    </div>
   </div>
 </section>
+
+{{marquee}}

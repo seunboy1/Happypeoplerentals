@@ -144,6 +144,7 @@
 <script src="/site.js" defer></script>
 </head>
 <body>
+<script>document.body.classList.add('js')</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header" data-header>
   <div class="site-header__bar">
@@ -170,13 +171,14 @@
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li><a href="/">Home</a></li><li aria-current="page">Gallery</li></ol></nav>
 <header class="page-head">
   <div class="wrap">
+    <span class="eyebrow">Gallery</span>
     <h1 class="display d-1">Event photo gallery</h1>
     <p class="lede">See the fun we've helped create, from birthdays, weddings and festivals to corporate events and community celebrations across Ottawa and Gatineau.</p>
   </div>
 </header>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head"><h2 class="display d-2">Family fun days</h2></div>
     <div class="gallery">
       <figure><img src="/images/giant-connect-4-at-family-event.webp" srcset="/images/giant-connect-4-at-family-event-500.webp 500w, /images/giant-connect-4-at-family-event.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Giant Connect 4 at a family event" width="1000" height="919" loading="lazy" decoding="async"><figcaption>Giant Connect 4</figcaption></figure>
@@ -192,7 +194,7 @@
 </section>
 
 <section class="section section--chalk">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head"><h2 class="display d-2">Corporate and special events</h2></div>
     <div class="gallery">
       <figure><img src="/images/cornhole-corporate-team-building.webp" srcset="/images/cornhole-corporate-team-building-500.webp 500w, /images/cornhole-corporate-team-building.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Cornhole at a corporate team-building event" width="1000" height="667" loading="lazy" decoding="async"><figcaption>Cornhole</figcaption></figure>
@@ -207,12 +209,16 @@
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap" style="padding-block:clamp(48px,7vw,88px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-box" data-reveal>
     <h2 class="display d-2" style="max-width:16ch;">Want this at your event?</h2>
     <div class="btn-row"><a href="/get-a-quote/" class="btn btn--ink">Get a free quote</a><a href="/rental-catalog/" class="btn btn--line">Browse rentals</a></div>
+    </div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span></div></div>
 </main>
 <footer class="site-footer">
   <div class="site-footer__grid">

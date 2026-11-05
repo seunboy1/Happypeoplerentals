@@ -10,13 +10,14 @@
 -->
 <header class="page-head">
   <div class="wrap">
+    <span class="eyebrow">About us</span>
     <h1 class="display d-1">About Happy People Rentals</h1>
     <p class="lede">Fun and affordable event rentals in Ottawa, Gatineau and surrounding areas. Making every event memorable.</p>
   </div>
 </header>
 
 <section class="section">
-  <div class="wrap split">
+  <div class="wrap split"" data-reveal>
     <div class="photo photo--square">{{img:g_connect4|eager}}</div>
     <div class="prose">
       <h2 class="display d-2">What we do</h2>
@@ -29,7 +30,7 @@
 </section>
 
 <section class="section section--ink">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head"><h2 class="display d-2">Who we set up for</h2></div>
     <div class="who">
       <div><h3>Birthdays &amp; family gatherings</h3><p class="muted">Backyard parties and celebrations of any size.</p></div>
@@ -43,7 +44,7 @@
 </section>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Organizations we've worked with</h2>
       <p class="lede muted">We've provided interactive activities, yard games and event rentals for companies, not-for-profits, sports clubs, festivals and schools.</p>
@@ -52,9 +53,13 @@
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap" style="padding-block:clamp(48px,7vw,88px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-box" data-reveal>
     <h2 class="display d-2" style="max-width:16ch;">Ready to make your event memorable?</h2>
     <div class="btn-row"><a href="/get-a-quote/" class="btn btn--ink">Get a free quote</a><a href="tel:{{tel}}" class="btn btn--line">Call {{phone}}</a></div>
+    </div>
   </div>
 </section>
+
+{{marquee}}

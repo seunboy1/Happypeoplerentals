@@ -186,6 +186,7 @@
 <script src="/site.js" defer></script>
 </head>
 <body>
+<script>document.body.classList.add('js')</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header" data-header>
   <div class="site-header__bar">
@@ -212,6 +213,7 @@
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li><a href="/">Home</a></li><li><a href="/rental-catalog/">Rental Catalog</a></li><li aria-current="page">Bouncy Castle</li></ol></nav>
 <header class="page-head">
   <div class="wrap">
+    <span class="eyebrow">Bouncy castle</span>
     <h1 class="display d-1">Bouncy castle rentals in Ottawa</h1>
     <p class="lede">Big fun, bigger smiles. A colourful inflatable castle gives children a place to jump, bounce and play while you enjoy the celebration.</p>
     <div class="btn-row"><a href="/get-a-quote/?game=Bouncy+Castle" class="btn btn--ink">Get a free quote</a></div>
@@ -219,7 +221,7 @@
 </header>
 
 <section class="section">
-  <div class="wrap split split--center">
+  <div class="wrap split" data-reveal split--center">
     <div class="photo photo--square photo--white"><img src="/images/bouncy-castle-rental-ottawa.webp" srcset="/images/bouncy-castle-rental-ottawa-500.webp 500w, /images/bouncy-castle-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Colourful bouncy castle for rent" width="1000" height="1033" fetchpriority="high" decoding="async"></div>
     <div class="prose">
       <h2 class="display d-2">Perfect for every celebration</h2>
@@ -236,69 +238,73 @@
 </section>
 
 <section class="section section--chalk">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Add more games for older kids and adults</h2>
       <a href="/inflatable-games/" class="link">See all inflatable games →</a>
     </div>
     <div class="games">
-<article class="game" id="infl_basketball">
+<article class="game" id="infl_basketball" data-reveal style="--delay:0ms">
   <div class="game__photo game__photo--product"><img src="/images/inflatable-basketball-game-rental-ottawa.webp" srcset="/images/inflatable-basketball-game-rental-ottawa-500.webp 500w, /images/inflatable-basketball-game-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Inflatable basketball game for rent" width="1000" height="1023" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Inflatable Basketball</h3>
     <p>Shoot hoops and score points on a giant inflatable court. Perfect for school events and festivals.</p>
   </div>
-  <div class="specs specs--price">
-    <span><b>$180</b>rental price</span>
-    <a href="/get-a-quote/?game=Inflatable+Basketball">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$180</b> per rental</span>
+    <a href="/get-a-quote/?game=Inflatable+Basketball">Add to quote</a>
   </div>
 </article>
-<article class="game" id="infl_soccerdart">
+<article class="game" id="infl_soccerdart" data-reveal style="--delay:60ms">
   <div class="game__photo game__photo--product"><img src="/images/inflatable-soccer-darts-rental-ottawa.webp" srcset="/images/inflatable-soccer-darts-rental-ottawa-500.webp 500w, /images/inflatable-soccer-darts-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Inflatable soccer dart board game for rent" width="1000" height="1014" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Inflatable Soccer Darts</h3>
     <p>Kick soccer balls at a giant inflatable dartboard and aim for the highest score.</p>
   </div>
-  <div class="specs specs--price">
-    <span><b>$180</b>rental price</span>
-    <a href="/get-a-quote/?game=Inflatable+Soccer+Darts">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$180</b> per rental</span>
+    <a href="/get-a-quote/?game=Inflatable+Soccer+Darts">Add to quote</a>
   </div>
 </article>
-<article class="game" id="infl_connect4">
+<article class="game" id="infl_connect4" data-reveal style="--delay:120ms">
   <div class="game__photo game__photo--product"><img src="/images/inflatable-connect-4-rental-ottawa.webp" srcset="/images/inflatable-connect-4-rental-ottawa-500.webp 500w, /images/inflatable-connect-4-rental-ottawa.webp 786w" sizes="(max-width: 620px) 100vw, 300px" alt="Inflatable Connect 4 game for rent" width="786" height="666" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Inflatable Connect 4</h3>
     <p>Connect 4 on a giant inflatable frame. Connect four in a row while blocking your opponent.</p>
   </div>
-  <div class="specs specs--price">
-    <span><b>$180</b>rental price</span>
-    <a href="/get-a-quote/?game=Inflatable+Connect+4">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$180</b> per rental</span>
+    <a href="/get-a-quote/?game=Inflatable+Connect+4">Add to quote</a>
   </div>
 </article>
-<article class="game" id="infl_axe">
+<article class="game" id="infl_axe" data-reveal style="--delay:180ms">
   <div class="game__photo game__photo--product"><img src="/images/inflatable-axe-throw-rental-ottawa.webp" srcset="/images/inflatable-axe-throw-rental-ottawa-500.webp 500w, /images/inflatable-axe-throw-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Inflatable axe throwing game for rent" width="1000" height="984" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Inflatable Axe Throwing</h3>
     <p>Toss soft, safe throwing axes at an inflatable target. Great for team-building days.</p>
   </div>
-  <div class="specs specs--price">
-    <span><b>$180</b>rental price</span>
-    <a href="/get-a-quote/?game=Inflatable+Axe+Throwing">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$180</b> per rental</span>
+    <a href="/get-a-quote/?game=Inflatable+Axe+Throwing">Add to quote</a>
   </div>
 </article>
 </div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap" style="padding-block:clamp(48px,7vw,88px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-box" data-reveal>
     <div class="stack" style="max-width:620px;">
       <h2 class="display d-2">Bring the bounce to your next event</h2>
       <p class="lede">Planning a birthday, school fun day or community festival in Ottawa or nearby? Ask us for a free quote.</p>
     </div>
     <div class="btn-row"><a href="/get-a-quote/?game=Bouncy+Castle" class="btn btn--ink">Get a free quote</a><a href="tel:+13435585631" class="btn btn--line">Call 343-558-5631</a></div>
+    </div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span></div></div>
 </main>
 <footer class="site-footer">
   <div class="site-footer__grid">
