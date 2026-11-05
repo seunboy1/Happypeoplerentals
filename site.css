@@ -55,11 +55,11 @@ p { text-wrap: pretty; }
 
 /* ---------- Type ---------- */
 .display { font-family: var(--display); font-weight: 400; line-height: 0.95; letter-spacing: -0.005em; }
-.d-hero { font-size: clamp(40px, 7.2vw, 104px); line-height: 0.9; }
-.d-1 { font-size: clamp(36px, 5.6vw, 72px); }
-.d-2 { font-size: clamp(28px, 4vw, 52px); }
-.d-3 { font-size: clamp(20px, 2.2vw, 26px); line-height: 1; }
-.lede { font-size: clamp(16px, 1.8vw, 19px); line-height: 1.55; max-width: 58ch; }
+.d-hero { font-size: clamp(34px, 5.4vw, 72px); line-height: 0.95; }
+.d-1 { font-size: clamp(30px, 4.2vw, 52px); }
+.d-2 { font-size: clamp(24px, 3vw, 38px); }
+.d-3 { font-size: clamp(18px, 1.8vw, 21px); line-height: 1.05; }
+.lede { font-size: clamp(16px, 1.5vw, 18px); line-height: 1.55; max-width: 58ch; }
 .muted { color: var(--muted); }
 .section--ink .muted { color: rgba(255, 255, 255, 0.74); }
 .label { font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
@@ -198,7 +198,7 @@ p { text-wrap: pretty; }
 /* ---------- Steps (a real sequence) ---------- */
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: clamp(20px, 3vw, 40px); counter-reset: step; }
 .step { display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 3px solid var(--ink); }
-.step__num { font-family: var(--display); font-size: 44px; line-height: 1; }
+.step__num { font-family: var(--display); font-size: 34px; line-height: 1; }
 .step p { font-size: 16px; line-height: 1.55; }
 
 /* ---------- Occasions ---------- */
@@ -211,7 +211,7 @@ p { text-wrap: pretty; }
 .cta-band { background: var(--yellow); overflow: hidden; }
 .cta-band__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(24px, 5vw, 72px); align-items: end; padding-top: clamp(48px, 7vw, 96px); }
 .cta-band__copy { display: flex; flex-direction: column; gap: 18px; padding-bottom: clamp(48px, 7vw, 96px); }
-.cta-band__phone { font-family: var(--display); font-size: clamp(22px, 2.6vw, 30px); }
+.cta-band__phone { font-family: var(--display); font-size: clamp(20px, 2.2vw, 26px); }
 @media (max-width: 760px) { .cta-band__grid { grid-template-columns: 1fr; } .cta-band__copy { padding-bottom: 0; } }
 
 .board { background: var(--board); border-radius: 18px 18px 0 0; padding: clamp(10px, 1.4vw, 16px); display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(6px, 1vw, 12px); box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2); }
