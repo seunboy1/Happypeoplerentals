@@ -144,6 +144,7 @@
 <script src="/site.js" defer></script>
 </head>
 <body>
+<script>document.body.classList.add('js')</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header" data-header>
   <div class="site-header__bar">
@@ -170,13 +171,14 @@
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li><a href="/">Home</a></li><li aria-current="page">Packages</li></ol></nav>
 <header class="page-head">
   <div class="wrap">
-    <h1 class="display d-1">Party game packages</h1>
-    <p class="lede">Three bundles that cover most of the events we set up. Swap any game in or out, and we'll quote it either way.</p>
+    <span class="eyebrow">Packages</span>
+    <h1 class="display d-1">Pick a lineup, not a list.</h1>
+    <p class="lede">Three bundles that cover most events we set up. Every package includes delivery, setup and a quick walkthrough. Mix and match freely, and we'll price it either way.</p>
   </div>
 </header>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="packages">
       <article class="package">
         <span class="package__tag">Up to 30 guests</span>
@@ -219,69 +221,77 @@
 </section>
 
 <section class="section section--chalk">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Popular add-ons</h2>
       <a href="/rental-catalog/#party" class="link">See all party items →</a>
     </div>
     <div class="games">
-<article class="game" id="popcorn">
+<article class="game" id="popcorn" data-reveal style="--delay:0ms">
   <div class="game__photo game__photo--product"><img src="/images/popcorn-machine-rental-ottawa.webp" srcset="/images/popcorn-machine-rental-ottawa-500.webp 500w, /images/popcorn-machine-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Popcorn machine for rent" width="1000" height="1319" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Popcorn Machine</h3>
-    <p>Fresh popcorn that brings a movie-theatre feel to birthdays and school events.</p>
+    <p>Fresh popcorn, movie-theatre style.</p>
+    <span class="game__meta">Needs power</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>Ask</b>for a price</span>
-    <a href="/get-a-quote/?game=Popcorn+Machine">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>Ask</b> for a price</span>
+    <a href="/get-a-quote/?game=Popcorn+Machine">Add to quote</a>
   </div>
 </article>
-<article class="game" id="cottoncandy">
+<article class="game" id="cottoncandy" data-reveal style="--delay:60ms">
   <div class="game__photo game__photo--product"><img src="/images/cotton-candy-machine-rental-ottawa.webp" srcset="/images/cotton-candy-machine-rental-ottawa-500.webp 500w, /images/cotton-candy-machine-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Cotton candy machine for rent" width="1000" height="1328" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Cotton Candy Machine</h3>
-    <p>Fresh, fluffy cotton candy for birthdays, festivals and celebrations.</p>
+    <p>Fresh, fluffy cotton candy.</p>
+    <span class="game__meta">Needs power</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>Ask</b>for a price</span>
-    <a href="/get-a-quote/?game=Cotton+Candy+Machine">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>Ask</b> for a price</span>
+    <a href="/get-a-quote/?game=Cotton+Candy+Machine">Add to quote</a>
   </div>
 </article>
-<article class="game" id="speaker">
+<article class="game" id="speaker" data-reveal style="--delay:120ms">
   <div class="game__photo game__photo--product"><img src="/images/bluetooth-speaker-microphone-rental-ottawa.webp" srcset="/images/bluetooth-speaker-microphone-rental-ottawa-500.webp 500w, /images/bluetooth-speaker-microphone-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Bluetooth speaker and microphones for rent" width="1000" height="1339" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Bluetooth Speaker &amp; Microphones</h3>
-    <p>Clear sound for music, speeches, announcements, games and karaoke.</p>
+    <p>Clear sound for music, speeches and karaoke.</p>
+    <span class="game__meta">2 microphones</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$30</b>rental price</span>
-    <a href="/get-a-quote/?game=Bluetooth+Speaker+%26+Microphones">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$30</b> per rental</span>
+    <a href="/get-a-quote/?game=Bluetooth+Speaker+%26+Microphones">Add to quote</a>
   </div>
 </article>
-<article class="game" id="ledlight">
+<article class="game" id="ledlight" data-reveal style="--delay:180ms">
   <div class="game__photo game__photo--product"><img src="/images/led-string-lights-rental-ottawa.webp" srcset="/images/led-string-lights-rental-ottawa-500.webp 500w, /images/led-string-lights-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="LED string lights for rent" width="1000" height="843" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">LED String Lights</h3>
-    <p>A warm glow for tents, patios, backyards and evening celebrations.</p>
+    <p>A warm glow for tents, patios and evenings.</p>
+    <span class="game__meta">Indoor or outdoor</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$30</b>rental price</span>
-    <a href="/get-a-quote/?game=LED+String+Lights">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$30</b> per rental</span>
+    <a href="/get-a-quote/?game=LED+String+Lights">Add to quote</a>
   </div>
 </article>
 </div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap" style="padding-block:clamp(48px,7vw,88px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-box" data-reveal>
     <div class="stack" style="max-width:620px;">
       <h2 class="display d-2">Not sure what fits your space?</h2>
       <p class="lede">Tell us about the yard, hall or park and how many people are coming. We'll suggest a lineup that fits.</p>
     </div>
     <div class="btn-row"><a href="/get-a-quote/" class="btn btn--ink">Get a free quote</a><a href="tel:+13435585631" class="btn btn--line">Call 343-558-5631</a></div>
+    </div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span></div></div>
 </main>
 <footer class="site-footer">
   <div class="site-footer__grid">

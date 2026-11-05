@@ -144,6 +144,7 @@
 <script src="/site.js" defer></script>
 </head>
 <body>
+<script>document.body.classList.add('js')</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header" data-header>
   <div class="site-header__bar">
@@ -170,16 +171,18 @@
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li><a href="/">Home</a></li><li aria-current="page">About</li></ol></nav>
 <header class="page-head">
   <div class="wrap">
-    <h1 class="display d-1">About Happy People Rentals</h1>
-    <p class="lede">Fun and affordable event rentals in Ottawa, Gatineau and surrounding areas. Making every event memorable.</p>
+    <span class="eyebrow">About us</span>
+    <h1 class="display d-1">We rent out the reason people stay longer.</h1>
+    <p class="script" style="font-size:clamp(18px,2.6vw,26px); color:var(--gold);">Making Every Event Memorable</p>
+    <p class="lede">Fun and affordable event rentals in Ottawa, Gatineau and surrounding areas for birthdays, weddings, corporate events, school events, church events, community celebrations, festivals, family gatherings and backyard parties.</p>
   </div>
 </header>
 
 <section class="section">
-  <div class="wrap split">
+  <div class="wrap split"" data-reveal>
     <div class="photo photo--square"><img src="/images/giant-connect-4-at-family-event.webp" srcset="/images/giant-connect-4-at-family-event-500.webp 500w, /images/giant-connect-4-at-family-event.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Giant Connect 4 at a family event" width="1000" height="919" fetchpriority="high" decoding="async"></div>
     <div class="prose">
-      <h2 class="display d-2">What we do</h2>
+      <h2 class="display d-2">What we bring to your event.</h2>
       <p>Happy People Rentals provides event rentals for birthdays, weddings, corporate events, school events, church events, community celebrations, festivals, family gatherings and backyard parties.</p>
       <p>Our inventory includes yard games, giant games, party games, arcade games, inflatable games, a bouncy castle, a photo booth, flower walls, a flower bar, tables, chairs and canopies. Popular choices include Giant Connect 4, Giant Jenga, cornhole, Giant Guess Who, Giant Tetris, Plinko, ladder toss, Spikeball, Kan Jam, table tennis, foosball and arcade basketball.</p>
       <p>Whether you're planning a small backyard celebration or a large community or corporate event, we make it easy to add interactive entertainment, seating and event essentials.</p>
@@ -189,7 +192,7 @@
 </section>
 
 <section class="section section--ink">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head"><h2 class="display d-2">Who we set up for</h2></div>
     <div class="who">
       <div><h3>Birthdays &amp; family gatherings</h3><p class="muted">Backyard parties and celebrations of any size.</p></div>
@@ -203,7 +206,7 @@
 </section>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Organizations we've worked with</h2>
       <p class="lede muted">We've provided interactive activities, yard games and event rentals for companies, not-for-profits, sports clubs, festivals and schools.</p>
@@ -223,12 +226,16 @@
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap" style="padding-block:clamp(48px,7vw,88px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-box" data-reveal>
     <h2 class="display d-2" style="max-width:16ch;">Ready to make your event memorable?</h2>
     <div class="btn-row"><a href="/get-a-quote/" class="btn btn--ink">Get a free quote</a><a href="tel:+13435585631" class="btn btn--line">Call 343-558-5631</a></div>
+    </div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span></div></div>
 </main>
 <footer class="site-footer">
   <div class="site-footer__grid">

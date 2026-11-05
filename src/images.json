@@ -659,5 +659,53 @@
   "h": 592,
   "kind": "photo",
   "small": "hero-yard-games-party-ottawa-500.webp"
+ },
+ "occ_birthday": {
+  "file": "occasion-birthday-party-games.webp",
+  "small": "occasion-birthday-party-games-500.webp",
+  "alt": "Birthday party with giant games set up in a backyard",
+  "w": 1000,
+  "h": 800,
+  "kind": "photo"
+ },
+ "occ_wedding": {
+  "file": "occasion-wedding-lawn-games.webp",
+  "small": "occasion-wedding-lawn-games-500.webp",
+  "alt": "Wedding guests playing lawn games",
+  "w": 1000,
+  "h": 667,
+  "kind": "photo"
+ },
+ "occ_corporate": {
+  "file": "occasion-corporate-event-games.webp",
+  "small": "occasion-corporate-event-games-500.webp",
+  "alt": "Corporate team playing giant games",
+  "w": 1000,
+  "h": 800,
+  "kind": "photo"
+ },
+ "occ_school": {
+  "file": "occasion-school-fun-day-games.webp",
+  "small": "occasion-school-fun-day-games-500.webp",
+  "alt": "School fun day with games",
+  "w": 1000,
+  "h": 800,
+  "kind": "photo"
+ },
+ "occ_festival": {
+  "file": "occasion-festival-carnival-games.webp",
+  "small": "occasion-festival-carnival-games-500.webp",
+  "alt": "Festival crowd around carnival games",
+  "w": 1000,
+  "h": 409,
+  "kind": "photo"
+ },
+ "occ_community": {
+  "file": "occasion-community-day-games.webp",
+  "small": "occasion-community-day-games-500.webp",
+  "alt": "Community day with games and canopies",
+  "w": 1000,
+  "h": 667,
+  "kind": "photo"
  }
 }

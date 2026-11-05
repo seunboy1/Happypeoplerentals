@@ -124,6 +124,7 @@
 <script src="/site.js" defer></script>
 </head>
 <body class="has-hero">
+<script>document.body.classList.add('js')</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header" data-header>
   <div class="site-header__bar">
@@ -147,129 +148,159 @@
 </div>
 <main id="main">
 
-<section class="hero">
-  <div class="hero__media">
+<section class="hero" id="top">
+  <div class="hero__media" data-hero-media>
     <video autoplay muted loop playsinline preload="metadata" poster="/images/hero-yard-games-party-ottawa.webp" aria-hidden="true">
       <source src="/media/hero.mp4" type="video/mp4">
     </video>
   </div>
   <div class="hero__shade"></div>
-  <div class="hero__inner">
-    <h1 class="display d-hero">Yard game &amp; party rentals in <span class="hl">Ottawa</span> &amp; Gatineau</h1>
+  <div class="hero__inner" data-hero-copy>
+    <span class="eyebrow">Ottawa · Gatineau · Surrounding areas</span>
+    <h1 class="display d-hero">Giant yard games,<br>delivered to your party.</h1>
     <div class="hero__foot">
-      <div class="stack" style="gap:22px;">
-        <p>Bringing fun to every event. Giant games, inflatables, bouncy castles, photo booths, tables and chairs for birthdays, weddings, corporate, school and community events.</p>
-        <div class="btn-row">
-          <a href="/get-a-quote/" class="btn btn--yellow">Get a free quote <span class="arrow" aria-hidden="true">→</span></a>
-          <a href="/rental-catalog/" class="btn btn--ghost">See all rentals</a>
-        </div>
+      <p>Connect 4, Jenga, cornhole and more. We drop off and set up, so you can focus on the people.</p>
+      <div class="btn-row">
+        <a href="/get-a-quote/" class="btn btn--yellow">Get a quote <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="/rental-catalog/" class="btn btn--ghost">Explore the games</a>
       </div>
-      <p class="hero__events">Birthdays · weddings · school fun days<br>corporate events · church events · festivals</p>
     </div>
   </div>
+  <span class="hero__scroll" aria-hidden="true">SCROLL</span>
 </section>
 
-<div class="facts">
-  <div class="facts__grid" style="max-width:var(--max); margin:0 auto;">
-    <div class="facts__item"><b>Delivered &amp; set up</b>Clean equipment brought to your event</div>
-    <div class="facts__item"><b>Ottawa · Gatineau</b>Kanata, Orléans, Barrhaven, Nepean and nearby</div>
-    <div class="facts__item"><b>Free quote</b>Call or text <a href="tel:+13435585631" style="color:#fff; font-weight:700;">343-558-5631</a></div>
-  </div>
-</div>
+<div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span></div></div>
 
-<section class="section" id="popular">
+<section class="section" id="rentals">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <h2 class="display d-1">Our most popular rentals</h2>
-      <a href="/rental-catalog/" class="link">See the full rental catalog →</a>
+      <span class="eyebrow">01 / Catalog</span>
     </div>
     <div class="games">
-<article class="game" id="connect4">
+<article class="game" id="connect4" data-reveal style="--delay:0ms">
   <div class="game__photo game__photo--product"><img src="/images/giant-connect-4-rental-ottawa.webp" srcset="/images/giant-connect-4-rental-ottawa-500.webp 500w, /images/giant-connect-4-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Giant Connect 4 game for rent" width="1000" height="988" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Giant Connect 4</h3>
-    <p>The classic four-in-a-row game at full height. Drop the discs, block your opponent and connect four first.</p>
+    <p>Four-in-a-row at full height. The crowd favourite at every event.</p>
+    <span class="game__meta">Ages 5+ · 2 players</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$50</b>rental price</span>
-    <a href="/get-a-quote/?game=Giant+Connect+4">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$50</b> per rental</span>
+    <a href="/get-a-quote/?game=Giant+Connect+4">Add to quote</a>
   </div>
 </article>
-<article class="game" id="jenga">
+<article class="game" id="jenga" data-reveal style="--delay:60ms">
   <div class="game__photo game__photo--product"><img src="/images/giant-jenga-rental-ottawa.webp" srcset="/images/giant-jenga-rental-ottawa-500.webp 500w, /images/giant-jenga-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Giant Jenga tower for rent" width="1000" height="750" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Giant Jenga</h3>
-    <p>The classic stacking game with giant-sized blocks. Great for guests of all ages.</p>
+    <p>A tower that gets taller, wobblier and louder as the night goes on.</p>
+    <span class="game__meta">Ages 6+ · 2–8 players</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$50</b>rental price</span>
-    <a href="/get-a-quote/?game=Giant+Jenga">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$50</b> per rental</span>
+    <a href="/get-a-quote/?game=Giant+Jenga">Add to quote</a>
   </div>
 </article>
-<article class="game" id="cornhole">
+<article class="game" id="cornhole" data-reveal style="--delay:120ms">
   <div class="game__photo game__photo--product"><img src="/images/cornhole-rental-ottawa.webp" srcset="/images/cornhole-rental-ottawa-500.webp 500w, /images/cornhole-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Cornhole boards and bean bags for rent" width="1000" height="1090" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Cornhole</h3>
-    <p>A tossing game for all ages. Each board measures 4 ft by 2 ft and sets up on any flat lawn.</p>
+    <p>Two boards, eight bags, endless rematches. Sets up anywhere flat.</p>
+    <span class="game__meta">Ages 6+ · 2–4 players</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$50</b>rental price</span>
-    <a href="/get-a-quote/?game=Cornhole">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$50</b> per rental</span>
+    <a href="/get-a-quote/?game=Cornhole">Add to quote</a>
   </div>
 </article>
-<article class="game" id="laddertoss">
+<article class="game" id="laddertoss" data-reveal style="--delay:180ms">
   <div class="game__photo game__photo--product"><img src="/images/ladder-toss-rental-ottawa.webp" srcset="/images/ladder-toss-rental-ottawa-500.webp 500w, /images/ladder-toss-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Ladder toss game for rent" width="1000" height="1245" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Ladder Toss</h3>
-    <p>Toss the bolas onto the ladder rungs to score. Easy to learn and great for backyards.</p>
+    <p>Simple to learn, hard to put down. Great for tight backyards.</p>
+    <span class="game__meta">Ages 6+ · 2–4 players</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$50</b>rental price</span>
-    <a href="/get-a-quote/?game=Ladder+Toss">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$50</b> per rental</span>
+    <a href="/get-a-quote/?game=Ladder+Toss">Add to quote</a>
   </div>
 </article>
 </div>
+    <div class="btn-row" style="margin-top:clamp(26px,3vw,40px);" data-reveal>
+      <a href="/rental-catalog/" class="btn btn--line">See the full catalog <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
 
-<section class="section section--chalk" id="rentals">
+<section class="section section--brown" id="occasions" style="padding-inline:0;">
+  <div class="wrap" style="padding-bottom:clamp(28px,4vw,46px);">
+    <div class="section-head section-head--plain" style="margin-bottom:0;">
+      <div class="section-head__text" data-reveal>
+        <span class="eyebrow">02 / Events</span>
+        <h2 class="display d-1">Perfect for every occasion</h2>
+        <p class="lede">Over 30 kinds of events covered: birthdays, weddings, corporate days, schools, churches, festivals and community celebrations.</p>
+      </div>
+      <span class="big-number" data-reveal aria-hidden="true">30+</span>
+    </div>
+  </div>
+  <div class="slider" role="region" aria-label="Event photos" tabindex="0"><div class="slider__track"><figure class="slide"><img src="/images/occasion-birthday-party-games.webp" srcset="/images/occasion-birthday-party-games-500.webp 500w, /images/occasion-birthday-party-games.webp 1000w" sizes="360px" alt="Birthday party with giant games set up in a backyard" width="1000" height="800" loading="lazy" decoding="async"><figcaption>Birthdays</figcaption></figure><figure class="slide"><img src="/images/occasion-wedding-lawn-games.webp" srcset="/images/occasion-wedding-lawn-games-500.webp 500w, /images/occasion-wedding-lawn-games.webp 1000w" sizes="360px" alt="Wedding guests playing lawn games" width="1000" height="667" loading="lazy" decoding="async"><figcaption>Weddings</figcaption></figure><figure class="slide"><img src="/images/occasion-corporate-event-games.webp" srcset="/images/occasion-corporate-event-games-500.webp 500w, /images/occasion-corporate-event-games.webp 1000w" sizes="360px" alt="Corporate team playing giant games" width="1000" height="800" loading="lazy" decoding="async"><figcaption>Corporate events</figcaption></figure><figure class="slide"><img src="/images/cornhole-corporate-team-building.webp" srcset="/images/cornhole-corporate-team-building-500.webp 500w, /images/cornhole-corporate-team-building.webp 1000w" sizes="360px" alt="Cornhole at a corporate team-building event" width="1000" height="667" loading="lazy" decoding="async"><figcaption>Team building</figcaption></figure><figure class="slide"><img src="/images/occasion-school-fun-day-games.webp" srcset="/images/occasion-school-fun-day-games-500.webp 500w, /images/occasion-school-fun-day-games.webp 1000w" sizes="360px" alt="School fun day with games" width="1000" height="800" loading="lazy" decoding="async"><figcaption>School events</figcaption></figure><figure class="slide"><img src="/images/occasion-festival-carnival-games.webp" srcset="/images/occasion-festival-carnival-games-500.webp 500w, /images/occasion-festival-carnival-games.webp 1000w" sizes="360px" alt="Festival crowd around carnival games" width="1000" height="409" loading="lazy" decoding="async"><figcaption>Festivals &amp; carnivals</figcaption></figure><figure class="slide"><img src="/images/giant-connect-4-at-family-event.webp" srcset="/images/giant-connect-4-at-family-event-500.webp 500w, /images/giant-connect-4-at-family-event.webp 1000w" sizes="360px" alt="Giant Connect 4 at a family event" width="1000" height="919" loading="lazy" decoding="async"><figcaption>Family days</figcaption></figure><figure class="slide"><img src="/images/occasion-community-day-games.webp" srcset="/images/occasion-community-day-games-500.webp 500w, /images/occasion-community-day-games.webp 1000w" sizes="360px" alt="Community day with games and canopies" width="1000" height="667" loading="lazy" decoding="async"><figcaption>Community days</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/occasion-birthday-party-games.webp" srcset="/images/occasion-birthday-party-games-500.webp 500w, /images/occasion-birthday-party-games.webp 1000w" sizes="360px" alt="Birthday party with giant games set up in a backyard" width="1000" height="800" loading="lazy" decoding="async"><figcaption>Birthdays</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/occasion-wedding-lawn-games.webp" srcset="/images/occasion-wedding-lawn-games-500.webp 500w, /images/occasion-wedding-lawn-games.webp 1000w" sizes="360px" alt="Wedding guests playing lawn games" width="1000" height="667" loading="lazy" decoding="async"><figcaption>Weddings</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/occasion-corporate-event-games.webp" srcset="/images/occasion-corporate-event-games-500.webp 500w, /images/occasion-corporate-event-games.webp 1000w" sizes="360px" alt="Corporate team playing giant games" width="1000" height="800" loading="lazy" decoding="async"><figcaption>Corporate events</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/cornhole-corporate-team-building.webp" srcset="/images/cornhole-corporate-team-building-500.webp 500w, /images/cornhole-corporate-team-building.webp 1000w" sizes="360px" alt="Cornhole at a corporate team-building event" width="1000" height="667" loading="lazy" decoding="async"><figcaption>Team building</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/occasion-school-fun-day-games.webp" srcset="/images/occasion-school-fun-day-games-500.webp 500w, /images/occasion-school-fun-day-games.webp 1000w" sizes="360px" alt="School fun day with games" width="1000" height="800" loading="lazy" decoding="async"><figcaption>School events</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/occasion-festival-carnival-games.webp" srcset="/images/occasion-festival-carnival-games-500.webp 500w, /images/occasion-festival-carnival-games.webp 1000w" sizes="360px" alt="Festival crowd around carnival games" width="1000" height="409" loading="lazy" decoding="async"><figcaption>Festivals &amp; carnivals</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/giant-connect-4-at-family-event.webp" srcset="/images/giant-connect-4-at-family-event-500.webp 500w, /images/giant-connect-4-at-family-event.webp 1000w" sizes="360px" alt="Giant Connect 4 at a family event" width="1000" height="919" loading="lazy" decoding="async"><figcaption>Family days</figcaption></figure><figure aria-hidden="true" class="slide"><img src="/images/occasion-community-day-games.webp" srcset="/images/occasion-community-day-games-500.webp 500w, /images/occasion-community-day-games.webp 1000w" sizes="360px" alt="Community day with games and canopies" width="1000" height="667" loading="lazy" decoding="async"><figcaption>Community days</figcaption></figure></div></div>
+  <div class="wrap" style="padding-top:clamp(28px,4vw,46px);">
+    <div class="btn-row" data-reveal>
+      <a href="/gallery/" class="btn btn--line">See event photos</a>
+      <a href="https://g.page/r/CV8HlLW7IVr-EAE/review" class="btn btn--yellow" rel="noopener">Read our Google reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <h2 class="display d-1">Everything you can rent</h2>
-      <p class="lede muted">Over 30 games and event items. Pick a category to see prices and photos.</p>
+      <span class="eyebrow">03 / Rentals</span>
     </div>
     <div class="tiles">
-      <a class="tile" href="/giant-games/"><div class="tile__photo"><img src="/images/giant-connect-4-at-family-event.webp" srcset="/images/giant-connect-4-at-family-event-500.webp 500w, /images/giant-connect-4-at-family-event.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Giant Connect 4 at a family event" width="1000" height="919" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Giant &amp; yard games</h3><p>Connect 4, Jenga, cornhole, Plinko, chess and more, from $50.</p></div></a>
-      <a class="tile" href="/inflatable-games/"><div class="tile__photo"><img src="/images/inflatable-basketball-game-rental-ottawa.webp" srcset="/images/inflatable-basketball-game-rental-ottawa-500.webp 500w, /images/inflatable-basketball-game-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Inflatable basketball game for rent" width="1000" height="1023" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Inflatable games</h3><p>Basketball, soccer darts, Connect 4 and axe throwing, $180 each.</p></div></a>
-      <a class="tile" href="/bouncy-castle/"><div class="tile__photo"><img src="/images/bouncy-castle-rental-ottawa.webp" srcset="/images/bouncy-castle-rental-ottawa-500.webp 500w, /images/bouncy-castle-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Colourful bouncy castle for rent" width="1000" height="1033" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Bouncy castle</h3><p>A colourful castle for birthdays, school days and festivals.</p></div></a>
-      <a class="tile" href="/photo-booth/"><div class="tile__photo"><img src="/images/photo-booth-wedding-ottawa.webp" srcset="/images/photo-booth-wedding-ottawa-500.webp 500w, /images/photo-booth-wedding-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Photo booth at a wedding" width="1000" height="1022" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Photo booth &amp; flower walls</h3><p>Fun photos and beautiful backdrops for weddings and parties.</p></div></a>
-      <a class="tile" href="/flower-bar/"><div class="tile__photo"><img src="/images/flower-bar-and-umbrella-rental.webp" srcset="/images/flower-bar-and-umbrella-rental-500.webp 500w, /images/flower-bar-and-umbrella-rental.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Flower bar with decorative umbrella" width="1000" height="1500" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Flower bar</h3><p>Guests build their own bouquets to take home.</p></div></a>
-      <a class="tile" href="/tables-chairs-for-every-celebration/"><div class="tile__photo"><img src="/images/tables-and-chairs-rental-ottawa.webp" srcset="/images/tables-and-chairs-rental-ottawa-500.webp 500w, /images/tables-and-chairs-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Tables and chairs set up for an event" width="1000" height="667" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Tables, chairs &amp; canopies</h3><p>Chairs from $2, 6 ft tables from $10, canopies from $70.</p></div></a>
+      <a class="tile" href="/giant-games/" data-reveal><div class="tile__photo"><img src="/images/giant-connect-4-at-family-event.webp" srcset="/images/giant-connect-4-at-family-event-500.webp 500w, /images/giant-connect-4-at-family-event.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Giant Connect 4 at a family event" width="1000" height="919" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Giant &amp; yard games</h3><p>Connect 4, Jenga, cornhole, Plinko and more.</p></div></a>
+      <a class="tile" href="/inflatable-games/" data-reveal style="--delay:60ms"><div class="tile__photo"><img src="/images/inflatable-basketball-game-rental-ottawa.webp" srcset="/images/inflatable-basketball-game-rental-ottawa-500.webp 500w, /images/inflatable-basketball-game-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Inflatable basketball game for rent" width="1000" height="1023" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Inflatable games</h3><p>Basketball, soccer darts, Connect 4, axe throwing.</p></div></a>
+      <a class="tile" href="/bouncy-castle/" data-reveal style="--delay:120ms"><div class="tile__photo"><img src="/images/bouncy-castle-rental-ottawa.webp" srcset="/images/bouncy-castle-rental-ottawa-500.webp 500w, /images/bouncy-castle-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Colourful bouncy castle for rent" width="1000" height="1033" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Bouncy castle</h3><p>Hours of bouncing for the kids.</p></div></a>
+      <a class="tile" href="/photo-booth/" data-reveal><div class="tile__photo"><img src="/images/photo-booth-wedding-ottawa.webp" srcset="/images/photo-booth-wedding-ottawa-500.webp 500w, /images/photo-booth-wedding-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Photo booth at a wedding" width="1000" height="1022" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Photo booth &amp; flower walls</h3><p>Fun photos and beautiful backdrops.</p></div></a>
+      <a class="tile" href="/flower-bar/" data-reveal style="--delay:60ms"><div class="tile__photo"><img src="/images/flower-bar-and-umbrella-rental.webp" srcset="/images/flower-bar-and-umbrella-rental-500.webp 500w, /images/flower-bar-and-umbrella-rental.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Flower bar with decorative umbrella" width="1000" height="1500" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Flower bar</h3><p>Guests build their own bouquets to take home.</p></div></a>
+      <a class="tile" href="/tables-chairs-for-every-celebration/" data-reveal style="--delay:120ms"><div class="tile__photo"><img src="/images/tables-and-chairs-rental-ottawa.webp" srcset="/images/tables-and-chairs-rental-ottawa-500.webp 500w, /images/tables-and-chairs-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Tables and chairs set up for an event" width="1000" height="667" loading="lazy" decoding="async"></div><div class="tile__body"><h3 class="display d-3">Tables, chairs &amp; canopies</h3><p>Seating and shade, brought in one trip.</p></div></a>
     </div>
   </div>
 </section>
 
-<section class="section" id="how">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 class="display d-1">How renting works</h2>
-      <p class="lede muted">We serve Ottawa, Gatineau and the surrounding area.</p>
+<section class="section section--chalk" id="how">
+  <div class="wrap split">
+    <div class="stack" data-reveal>
+      <span class="eyebrow">04 / How it works</span>
+      <h2 class="display d-1" style="font-size:clamp(28px,4vw,56px);">Three steps to a better party.</h2>
+      <p class="lede" style="max-width:420px;">Delivery and setup are handled by us across Ottawa, Gatineau and surrounding areas.</p>
     </div>
-    <ol class="steps" style="list-style:none; margin:0; padding:0;">
-      <li class="step"><span class="step__num" aria-hidden="true">1</span><h3 class="display d-3">Pick your rentals</h3><p class="muted">Browse the catalog, or tell us your crowd and space and we'll suggest a mix.</p></li>
-      <li class="step"><span class="step__num" aria-hidden="true">2</span><h3 class="display d-3">Get a free quote</h3><p class="muted">Send your date, location and guest count. The quote is free with no obligation.</p></li>
-      <li class="step"><span class="step__num" aria-hidden="true">3</span><h3 class="display d-3">We deliver and set up</h3><p class="muted">Clean equipment arrives at your event, ready for your guests to play.</p></li>
+    <ol class="steps">
+      <li class="step" data-reveal><span class="step__num" aria-hidden="true">01</span><div class="step__text"><h3 class="display d-3">Pick your games</h3><p>Browse the catalog and tell us what you want. Not sure? Tell us the crowd and we'll suggest a mix.</p></div></li>
+      <li class="step" data-reveal style="--delay:60ms"><span class="step__num" aria-hidden="true">02</span><div class="step__text"><h3 class="display d-3">Get a free quote</h3><p>Send the date, the place and the crowd size. No obligation.</p></div></li>
+      <li class="step" data-reveal style="--delay:120ms"><span class="step__num" aria-hidden="true">03</span><div class="step__text"><h3 class="display d-3">We deliver and set up</h3><p>We arrive ahead of your start time, set everything up and show you how it works.</p></div></li>
     </ol>
   </div>
 </section>
 
-<section class="section section--ink" id="clients">
+<section class="section--tight" style="padding-top:0; padding-bottom:var(--section);">
+  <div class="wrap" style="padding-top:var(--section);">
+    <div class="stats"><div class="stat" data-reveal style="--delay:0ms"><b>32+</b><span>Types of events covered</span></div><div class="stat" data-reveal style="--delay:60ms"><b>42+</b><span>Games and rentals available</span></div><div class="stat" data-reveal style="--delay:120ms"><b>$50</b><span>Most giant games, per rental</span></div><div class="stat" data-reveal style="--delay:180ms"><b>Free</b><span>Quote with no obligation</span></div></div>
+  </div>
+</section>
+
+<section class="section section--brown" id="clients">
   <div class="wrap">
-    <div class="section-head">
-      <h2 class="display d-1" style="max-width:16ch;">Trusted by organizations across Ottawa</h2>
-      <p class="lede muted">We've supplied games and event rentals to companies, not-for-profits, sports clubs, festivals, schools and community groups.</p>
+    <div class="section-head" data-reveal>
+      <div class="section-head__text">
+        <span class="eyebrow">05 / Trusted by</span>
+        <h2 class="display d-1">Organizations across Ottawa</h2>
+        <p class="lede">Companies, not-for-profits, sports clubs, festivals, schools and community groups.</p>
+      </div>
     </div>
-    <ul class="logos" role="list">
+    <div data-reveal><ul class="logos" role="list">
 <li><img src="/images/client-winners-chapel-international.webp" alt="Winners Chapel International logo" width="347" height="342" loading="lazy" decoding="async"></li>
 <li><img src="/images/client-ottawa-rapid-fc.webp" alt="Ottawa Rapid FC logo" width="352" height="339" loading="lazy" decoding="async"></li>
 <li><img src="/images/client-ghana-association-of-ottawa.webp" alt="Ghana Association of Ottawa logo" width="355" height="319" loading="lazy" decoding="async"></li>
@@ -280,43 +311,24 @@
 <li><img src="/images/client-rideau-valley-conservation-authority.webp" alt="Rideau Valley Conservation Authority logo" width="360" height="246" loading="lazy" decoding="async"></li>
 <li><img src="/images/client-afrofest-ottawa.webp" alt="Afrofest Ottawa logo" width="340" height="345" loading="lazy" decoding="async"></li>
 <li><img src="/images/client-community-resource-centre.webp" alt="Community Resource Centre logo" width="360" height="398" loading="lazy" decoding="async"></li>
-</ul>
+</ul></div>
   </div>
 </section>
 
-<section class="section" id="occasions">
-  <div class="wrap split">
-    <div class="stack" style="gap:18px;">
-      <h2 class="display d-1">Perfect for every occasion</h2>
-      <p class="lede muted">Our games and rentals entertain children, families, friends, colleagues and guests of all ages.</p>
-      <div class="btn-row">
-        <a href="/gallery/" class="btn btn--line">See event photos</a>
-        <a href="https://g.page/r/CV8HlLW7IVr-EAE/review" class="btn btn--yellow" rel="noopener">Read or leave a Google review</a>
+<section class="section" id="quote">
+  <div class="wrap">
+    <div class="cta-box" data-reveal>
+      <div class="cta-box__text">
+        <p class="script">Making Every Event Memorable</p>
+        <h2 class="display d-1" style="font-size:clamp(28px,4.4vw,58px);">Book your games for the weekend.</h2>
+        <p>Tell us the date, the place and the crowd size. We'll send a quote within one business day.</p>
+      </div>
+      <div class="cta-box__side">
+        <a href="/get-a-quote/" class="btn btn--yellow" style="padding:17px 30px; font-size:16px;">Request a quote <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="tel:+13435585631">343-558-5631</a>
+        <small><a href="mailto:info@happypeoplerentals.ca">info@happypeoplerentals.ca</a></small>
       </div>
     </div>
-    <ul class="ticks" style="font-size:17px;">
-      <li>Birthday parties and backyard celebrations</li>
-      <li>Weddings, bridal showers and baby showers</li>
-      <li>Corporate events, staff picnics and team building</li>
-      <li>School fun days, graduations and field days</li>
-      <li>Church events and family days</li>
-      <li>Community festivals, carnivals and fundraisers</li>
-    </ul>
-  </div>
-</section>
-
-<section class="cta-band" id="quote">
-  <div class="wrap cta-band__grid">
-    <div class="cta-band__copy">
-      <h2 class="display d-1">Book your games for the weekend.</h2>
-      <p class="lede">Tell us the date, the place and how many people are coming, and we'll send you a free quote.</p>
-      <div class="btn-row">
-        <a href="/get-a-quote/" class="btn btn--ink">Request a quote <span class="arrow" aria-hidden="true">→</span></a>
-        <a href="/packages/" class="btn btn--line">See packages</a>
-      </div>
-      <a href="tel:+13435585631" class="cta-band__phone">343-558-5631</a>
-    </div>
-    <div class="board" data-board aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="r" style="--d:1260ms"></i><i></i><i></i><i></i><i></i><i></i><i class="y" style="--d:840ms"></i><i class="r" style="--d:980ms"></i><i></i><i></i><i></i><i></i><i class="y" style="--d:420ms"></i><i class="r" style="--d:560ms"></i><i class="y" style="--d:700ms"></i><i></i><i></i><i></i><i class="y" style="--d:0ms"></i><i class="r" style="--d:140ms"></i><i class="y" style="--d:280ms"></i><i class="r" style="--d:1120ms"></i><i class="y" style="--d:1400ms"></i><i></i><i></i></div>
   </div>
 </section>
 </main>

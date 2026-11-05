@@ -34,6 +34,43 @@
     }
   }
 
+  // Sections fade up as they come into view
+  var revealed = document.querySelectorAll('[data-reveal]');
+  if (revealed.length && 'IntersectionObserver' in window) {
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); ro.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    revealed.forEach(function (el) { ro.observe(el); });
+    // Safety net: never leave anything hidden
+    setTimeout(function () { revealed.forEach(function (el) { el.classList.add('is-in'); }); }, 2500);
+  } else {
+    revealed.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // Hero drifts slowly as you scroll (parallax), unless the visitor prefers reduced motion
+  var heroMedia = document.querySelector('[data-hero-media]');
+  var heroCopy = document.querySelector('[data-hero-copy]');
+  if (heroMedia && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var ticking = false;
+    var drift = function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var y = window.scrollY || 0;
+        heroMedia.style.transform = 'translateY(' + (y * 0.28).toFixed(1) + 'px) scale(' + (1 + Math.min(y, 800) * 0.00012).toFixed(4) + ')';
+        if (heroCopy) {
+          heroCopy.style.transform = 'translateY(' + (y * -0.1).toFixed(1) + 'px)';
+          heroCopy.style.opacity = String(Math.max(0, 1 - y / 640));
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', drift, { passive: true });
+    drift();
+  }
+
   // Connect 4 board drops its pieces once, when it scrolls into view
   var board = document.querySelector('[data-board]');
   if (board && 'IntersectionObserver' in window) {

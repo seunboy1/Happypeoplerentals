@@ -94,17 +94,18 @@ def price_text(item):
     return f"${item['price']}" if item.get("price") is not None else "Ask"
 
 
-def card(item, heading="h3"):
-    price_label = "rental price" if item.get("price") is not None else "for a price"
-    return f"""<article class="game" id="{item['id']}">
+def card(item, heading="h3", delay=0):
+    price_label = "per rental" if item.get("price") is not None else "for a price"
+    return f"""<article class="game" id="{item['id']}" data-reveal style="--delay:{delay}ms">
   <div class="game__photo game__photo--product">{img(item['img'], sizes='(max-width: 620px) 100vw, 300px')}</div>
   <div class="game__body">
     <{heading} class="display d-3">{esc(item['name'])}</{heading}>
     <p>{esc(item['desc'])}</p>
+    <span class="game__meta">{esc(item.get('meta', ''))}</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>{price_text(item)}</b>{price_label}</span>
-    <a href="{quote_link(item['name'])}">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>{price_text(item)}</b> {price_label}</span>
+    <a href="{quote_link(item['name'])}">Add to quote</a>
   </div>
 </article>"""
 
@@ -118,7 +119,7 @@ def cards(spec):
         items = [ITEMS[x] for x in val.split(",")]
     if not items:
         fail(f"no items for cards:{spec}")
-    return '<div class="games">\n' + "\n".join(card(i) for i in items) + "\n</div>"
+    return '<div class="games">\n' + "\n".join(card(i, delay=(n % 4) * 60) for n, i in enumerate(items)) + "\n</div>"
 
 
 def logos():
@@ -157,7 +158,55 @@ def board():
     return '<div class="board" data-board aria-hidden="true">' + "".join(cells) + "</div>"
 
 
+MARQUEE_ITEMS = ["Giant Connect 4", "Giant Jenga", "Cornhole", "Ladder Toss", "Giant Tetris", "Inflatable Games",
+                 "Bouncy Castle", "Photo Booth", "Flower Bar", "Table Tennis", "Foosball", "Arcade Basketball",
+                 "Popcorn Machines", "Tables & Chairs", "Canopies"]
+OCCASIONS = [("occ_birthday", "Birthdays"), ("occ_wedding", "Weddings"), ("occ_corporate", "Corporate events"),
+             ("c_cornhole", "Team building"), ("occ_school", "School events"), ("occ_festival", "Festivals & carnivals"),
+             ("g_connect4", "Family days"), ("occ_community", "Community days")]
+EVENT_TAGS = ["Birthday parties", "Weddings", "Engagement parties", "Baby showers", "Graduations", "Corporate picnics",
+              "Team building days", "Client appreciation", "Staff appreciation", "Conferences", "Trade shows",
+              "School fun fairs", "Field days", "Prom & grad nights", "University orientation", "Church events",
+              "Community BBQs", "Block parties", "Neighbourhood days", "Canada Day events", "Festivals", "Carnivals",
+              "Fundraisers", "Charity galas", "Sports tournaments", "Camps & day camps", "Family reunions",
+              "Retirement parties", "Housewarmings", "Backyard parties", "Holiday parties", "Movie nights"]
+
+
+def marquee(arg):
+    """{{marquee}} or {{marquee:brown}}; the text is repeated so the loop is seamless."""
+    text = " ✦ ".join(MARQUEE_ITEMS) + " ✦ "
+    cls = "marquee marquee--brown" if arg == "brown" else "marquee"
+    return (f'<div class="{cls}" aria-hidden="true"><div class="marquee__track">'
+            f'<span>{esc(text)}</span><span>{esc(text)}</span></div></div>')
+
+
+def slider(arg):
+    """{{slider:occasions}}: a row of captioned photos that slides sideways. Duplicated for the loop."""
+    figs = "".join(f'<figure class="slide">{img(k, sizes="360px")}<figcaption>{esc(n)}</figcaption></figure>'
+                   for k, n in OCCASIONS)
+    copy = figs.replace("<figure", '<figure aria-hidden="true"')  # second copy makes the loop seamless
+    return (f'<div class="slider" role="region" aria-label="Event photos" tabindex="0">'
+            f'<div class="slider__track">{figs}{copy}</div></div>')
+
+
+def stats(_):
+    n_items = len(CATALOG["items"]) + len(CATALOG["extra_quote_options"])
+    rows = [(f"{len(EVENT_TAGS)}+", "Types of events covered"), (f"{n_items}+", "Games and rentals available"),
+            ("$50", "Most giant games, per rental"), ("Free", "Quote with no obligation")]
+    return '<div class="stats">' + "".join(f'<div class="stat" data-reveal style="--delay:{i*60}ms"><b>{esc(v)}</b><span>{esc(l)}</span></div>'
+                                           for i, (v, l) in enumerate(rows)) + "</div>"
+
+
+def tags(_):
+    return '<div class="tags">' + "".join(f"<span>{esc(t)}</span>" for t in EVENT_TAGS) + "</div>"
+
+
 SNIPPETS = {
+    "marquee": marquee,
+    "slider": slider,
+    "stats": stats,
+    "tags": tags,
+    "count": lambda _: str(len(CATALOG["items"]) + len(CATALOG["extra_quote_options"])),
     "phone": lambda _: BUSINESS["phone"],
     "tel": lambda _: BUSINESS["tel"],
     "email": lambda _: BUSINESS["email"],
@@ -433,6 +482,7 @@ def render(page, body):
 <script src="/site.js" defer></script>
 </head>
 <body{' class="has-hero"' if overlay else ''}>
+<script>document.body.classList.add('js')</script>
 <a class="skip" href="#main">Skip to content</a>
 {header(path, overlay)}
 <main id="main">

@@ -188,7 +188,7 @@
       "itemOffered": {
        "@type": "Service",
        "name": "Party Chair",
-       "description": "Comfortable folding chairs for weddings, birthdays and corporate events."
+       "description": "Comfortable folding chairs by the set."
       },
       "price": "2",
       "priceCurrency": "CAD"
@@ -198,7 +198,7 @@
       "itemOffered": {
        "@type": "Service",
        "name": "6 ft Party Table",
-       "description": "Folding table for food, drinks, gifts, games or guest seating."
+       "description": "Folding table for food, gifts or seating."
       },
       "price": "10",
       "priceCurrency": "CAD"
@@ -208,7 +208,7 @@
       "itemOffered": {
        "@type": "Service",
        "name": "Cocktail Table",
-       "description": "High round tables where guests can gather, mingle and set down drinks."
+       "description": "High round tables for mingling."
       }
      },
      {
@@ -216,7 +216,7 @@
       "itemOffered": {
        "@type": "Service",
        "name": "Canopy (10 ft × 10 ft)",
-       "description": "A shaded space for your guests that protects from sun and light weather."
+       "description": "10×10 ft shade for sun or light rain."
       },
       "price": "70",
       "priceCurrency": "CAD"
@@ -230,6 +230,7 @@
 <script src="/site.js" defer></script>
 </head>
 <body>
+<script>document.body.classList.add('js')</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header" data-header>
   <div class="site-header__bar">
@@ -256,6 +257,7 @@
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li><a href="/">Home</a></li><li><a href="/rental-catalog/">Rental Catalog</a></li><li aria-current="page">Tables &amp; Chairs</li></ol></nav>
 <header class="page-head">
   <div class="wrap">
+    <span class="eyebrow">Tables & chairs</span>
     <h1 class="display d-1">Table &amp; chair rentals in Ottawa</h1>
     <p class="lede">Comfortable seating and reliable event tables, delivered to make your setup simple, organized and stress-free.</p>
     <div class="btn-row"><a href="/get-a-quote/?game=Party+Chair" class="btn btn--ink">Get a free quote</a></div>
@@ -263,7 +265,7 @@
 </header>
 
 <section class="section">
-  <div class="wrap split split--center">
+  <div class="wrap split" data-reveal split--center">
     <div class="photo"><img src="/images/tables-and-chairs-rental-ottawa.webp" srcset="/images/tables-and-chairs-rental-ottawa-500.webp 500w, /images/tables-and-chairs-rental-ottawa.webp 1000w" sizes="(max-width: 700px) 100vw, 50vw" alt="Tables and chairs set up for an event" width="1000" height="667" fetchpriority="high" decoding="async"></div>
     <div class="prose">
       <h2 class="display d-2">Make room for your guests</h2>
@@ -274,54 +276,58 @@
 </section>
 
 <section class="section section--chalk">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Chairs, tables &amp; canopies</h2>
       <p class="muted">Prices are in Canadian dollars.</p>
     </div>
     <div class="games">
-<article class="game" id="chair">
+<article class="game" id="chair" data-reveal style="--delay:0ms">
   <div class="game__photo game__photo--product"><img src="/images/party-chair-rental-ottawa.webp" srcset="/images/party-chair-rental-ottawa-500.webp 500w, /images/party-chair-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Folding party chair for rent" width="1000" height="1288" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Party Chair</h3>
-    <p>Comfortable folding chairs for weddings, birthdays and corporate events.</p>
+    <p>Comfortable folding chairs by the set.</p>
+    <span class="game__meta">White or black</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$2</b>rental price</span>
-    <a href="/get-a-quote/?game=Party+Chair">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$2</b> per rental</span>
+    <a href="/get-a-quote/?game=Party+Chair">Add to quote</a>
   </div>
 </article>
-<article class="game" id="table6">
+<article class="game" id="table6" data-reveal style="--delay:60ms">
   <div class="game__photo game__photo--product"><img src="/images/six-foot-party-table-rental-ottawa.webp" srcset="/images/six-foot-party-table-rental-ottawa-500.webp 500w, /images/six-foot-party-table-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="6 foot folding party table for rent" width="1000" height="1027" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">6 ft Party Table</h3>
-    <p>Folding table for food, drinks, gifts, games or guest seating.</p>
+    <p>Folding table for food, gifts or seating.</p>
+    <span class="game__meta">Seats 6–8</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$10</b>rental price</span>
-    <a href="/get-a-quote/?game=6+ft+Party+Table">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$10</b> per rental</span>
+    <a href="/get-a-quote/?game=6+ft+Party+Table">Add to quote</a>
   </div>
 </article>
-<article class="game" id="cocktailtable">
+<article class="game" id="cocktailtable" data-reveal style="--delay:120ms">
   <div class="game__photo game__photo--product"><img src="/images/cocktail-table-rental-ottawa.webp" srcset="/images/cocktail-table-rental-ottawa-500.webp 500w, /images/cocktail-table-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Cocktail table for rent" width="1000" height="1419" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Cocktail Table</h3>
-    <p>High round tables where guests can gather, mingle and set down drinks.</p>
+    <p>High round tables for mingling.</p>
+    <span class="game__meta">Standing height</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>Ask</b>for a price</span>
-    <a href="/get-a-quote/?game=Cocktail+Table">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>Ask</b> for a price</span>
+    <a href="/get-a-quote/?game=Cocktail+Table">Add to quote</a>
   </div>
 </article>
-<article class="game" id="canopy">
+<article class="game" id="canopy" data-reveal style="--delay:180ms">
   <div class="game__photo game__photo--product"><img src="/images/canopy-tent-rental-ottawa.webp" srcset="/images/canopy-tent-rental-ottawa-500.webp 500w, /images/canopy-tent-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="10 by 10 foot canopy tent for rent" width="1000" height="1119" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Canopy (10 ft × 10 ft)</h3>
-    <p>A shaded space for your guests that protects from sun and light weather.</p>
+    <p>10×10 ft shade for sun or light rain.</p>
+    <span class="game__meta">Shade for 8–10 guests</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$70</b>rental price</span>
-    <a href="/get-a-quote/?game=Canopy+%2810+ft+%C3%97+10+ft%29">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$70</b> per rental</span>
+    <a href="/get-a-quote/?game=Canopy+%2810+ft+%C3%97+10+ft%29">Add to quote</a>
   </div>
 </article>
 </div>
@@ -329,7 +335,7 @@
 </section>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Available chairs and tables</h2>
       <p class="lede muted">White and black folding chairs, 6-foot folding party tables and cocktail tables for food service, seating, registration, displays and games.</p>
@@ -344,60 +350,66 @@
 </section>
 
 <section class="section section--chalk">
-  <div class="wrap">
+  <div class="wrap"" data-reveal>
     <div class="section-head">
       <h2 class="display d-2">Make your event complete</h2>
       <p class="lede muted">Tables and chairs are just the beginning. Add games, a popcorn or cotton candy machine, a speaker and microphones, or string lights.</p>
     </div>
     <div class="games">
-<article class="game" id="speaker">
+<article class="game" id="speaker" data-reveal style="--delay:0ms">
   <div class="game__photo game__photo--product"><img src="/images/bluetooth-speaker-microphone-rental-ottawa.webp" srcset="/images/bluetooth-speaker-microphone-rental-ottawa-500.webp 500w, /images/bluetooth-speaker-microphone-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Bluetooth speaker and microphones for rent" width="1000" height="1339" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Bluetooth Speaker &amp; Microphones</h3>
-    <p>Clear sound for music, speeches, announcements, games and karaoke.</p>
+    <p>Clear sound for music, speeches and karaoke.</p>
+    <span class="game__meta">2 microphones</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$30</b>rental price</span>
-    <a href="/get-a-quote/?game=Bluetooth+Speaker+%26+Microphones">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$30</b> per rental</span>
+    <a href="/get-a-quote/?game=Bluetooth+Speaker+%26+Microphones">Add to quote</a>
   </div>
 </article>
-<article class="game" id="ledlight">
+<article class="game" id="ledlight" data-reveal style="--delay:60ms">
   <div class="game__photo game__photo--product"><img src="/images/led-string-lights-rental-ottawa.webp" srcset="/images/led-string-lights-rental-ottawa-500.webp 500w, /images/led-string-lights-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="LED string lights for rent" width="1000" height="843" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">LED String Lights</h3>
-    <p>A warm glow for tents, patios, backyards and evening celebrations.</p>
+    <p>A warm glow for tents, patios and evenings.</p>
+    <span class="game__meta">Indoor or outdoor</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>$30</b>rental price</span>
-    <a href="/get-a-quote/?game=LED+String+Lights">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>$30</b> per rental</span>
+    <a href="/get-a-quote/?game=LED+String+Lights">Add to quote</a>
   </div>
 </article>
-<article class="game" id="popcorn">
+<article class="game" id="popcorn" data-reveal style="--delay:120ms">
   <div class="game__photo game__photo--product"><img src="/images/popcorn-machine-rental-ottawa.webp" srcset="/images/popcorn-machine-rental-ottawa-500.webp 500w, /images/popcorn-machine-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Popcorn machine for rent" width="1000" height="1319" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Popcorn Machine</h3>
-    <p>Fresh popcorn that brings a movie-theatre feel to birthdays and school events.</p>
+    <p>Fresh popcorn, movie-theatre style.</p>
+    <span class="game__meta">Needs power</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>Ask</b>for a price</span>
-    <a href="/get-a-quote/?game=Popcorn+Machine">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>Ask</b> for a price</span>
+    <a href="/get-a-quote/?game=Popcorn+Machine">Add to quote</a>
   </div>
 </article>
-<article class="game" id="cottoncandy">
+<article class="game" id="cottoncandy" data-reveal style="--delay:180ms">
   <div class="game__photo game__photo--product"><img src="/images/cotton-candy-machine-rental-ottawa.webp" srcset="/images/cotton-candy-machine-rental-ottawa-500.webp 500w, /images/cotton-candy-machine-rental-ottawa.webp 1000w" sizes="(max-width: 620px) 100vw, 300px" alt="Cotton candy machine for rent" width="1000" height="1328" loading="lazy" decoding="async"></div>
   <div class="game__body">
     <h3 class="display d-3">Cotton Candy Machine</h3>
-    <p>Fresh, fluffy cotton candy for birthdays, festivals and celebrations.</p>
+    <p>Fresh, fluffy cotton candy.</p>
+    <span class="game__meta">Needs power</span>
   </div>
-  <div class="specs specs--price">
-    <span><b>Ask</b>for a price</span>
-    <a href="/get-a-quote/?game=Cotton+Candy+Machine">Add to quote <span aria-hidden="true">→</span></a>
+  <div class="specs">
+    <span><b>Ask</b> for a price</span>
+    <a href="/get-a-quote/?game=Cotton+Candy+Machine">Add to quote</a>
   </div>
 </article>
 </div>
     <div class="btn-row" style="margin-top:24px;"><a href="/rental-catalog/" class="btn btn--line">Browse all rentals</a></div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span><span>Giant Connect 4 ✦ Giant Jenga ✦ Cornhole ✦ Ladder Toss ✦ Giant Tetris ✦ Inflatable Games ✦ Bouncy Castle ✦ Photo Booth ✦ Flower Bar ✦ Table Tennis ✦ Foosball ✦ Arcade Basketball ✦ Popcorn Machines ✦ Tables &amp; Chairs ✦ Canopies ✦ </span></div></div>
 </main>
 <footer class="site-footer">
   <div class="site-footer__grid">
