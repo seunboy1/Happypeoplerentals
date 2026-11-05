@@ -101,6 +101,7 @@ def card(item, heading="h3", delay=0):
   <div class="game__body">
     <{heading} class="display d-3">{esc(item['name'])}</{heading}>
     <p>{esc(item['desc'])}</p>
+    <span class="game__meta">{esc(item.get('meta', ''))}</span>
   </div>
   <div class="specs">
     <span><b>{price_text(item)}</b> {price_label}</span>
