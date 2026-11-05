@@ -380,11 +380,14 @@ def render(page, body):
     path = page["path"]
     url = abs_url(path)
     overlay = page.get("overlay", False)
-    og_file = IMAGES[page.get("image", "hero")]["file"]
+    og_meta = IMAGES[page.get("image", "hero")]
+    og_file, og_w, og_h, og_type = og_meta["file"], og_meta["w"], og_meta["h"], "image/webp"
     og_jpg = "og/" + og_file.replace(".webp", ".jpg")
     if os.path.exists(os.path.join(ROOT, "images", og_jpg)):
-        og_file = og_jpg  # JPG share image, shown by every social app
+        # JPG share image, shown by every social app
+        og_file, og_w, og_h, og_type = og_jpg, 1200, 630, "image/jpeg"
     og_img = SITE + "/images/" + og_file
+    og_alt = esc(og_meta["alt"])
     robots = "noindex, follow" if page.get("noindex") else "index, follow, max-image-preview:large"
     canonical = "" if page.get("noindex") else f'\n<link rel="canonical" href="{url}">'
     preload = page.get("preload", "")
@@ -406,8 +409,17 @@ def render(page, body):
 <meta property="og:description" content="{esc(page['description'])}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{og_img}">
-<meta property="og:image:alt" content="{esc(IMAGES[page.get('image', 'hero')]['alt'])}">
+<meta property="og:image:secure_url" content="{og_img}">
+<meta property="og:image:type" content="{og_type}">
+<meta property="og:image:width" content="{og_w}">
+<meta property="og:image:height" content="{og_h}">
+<meta property="og:image:alt" content="{og_alt}">
+<meta property="article:publisher" content="{BUSINESS['facebook']}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(page['title'])}">
+<meta name="twitter:description" content="{esc(page['description'])}">
+<meta name="twitter:image" content="{og_img}">
+<meta name="twitter:image:alt" content="{og_alt}">
 <meta name="theme-color" content="#3F3413">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
@@ -466,6 +478,9 @@ def main():
         dest = out_file(page["path"])
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         open(dest, "w", encoding="utf-8").write(html_out)
+        # photos on the page, listed in the sitemap so they can appear in Google Images
+        main_html = html_out.split('<main id="main">', 1)[-1].split("</main>", 1)[0]
+        page["_images"] = list(dict.fromkeys(re.findall(r'<img src="(/images/[^"]+)"', main_html)))
         pages.append(page)
         print(f"wrote {os.path.relpath(dest, ROOT)}")
 
@@ -474,14 +489,17 @@ def main():
     for p in sorted(pages, key=lambda p: (p["path"] != "/", p["path"])):
         if p.get("noindex") or p["path"].endswith(".html"):
             continue
-        urls.append(f"  <url>\n    <loc>{abs_url(p['path'])}</loc>\n    <lastmod>{today}</lastmod>\n  </url>")
+        imgs = "".join(f"\n    <image:image><image:loc>{SITE}{i}</image:loc></image:image>" for i in p["_images"])
+        urls.append(f"  <url>\n    <loc>{abs_url(p['path'])}</loc>\n    <lastmod>{today}</lastmod>{imgs}\n  </url>")
     open(os.path.join(ROOT, "sitemap.xml"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(urls) + "\n</urlset>\n")
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(urls) + "\n</urlset>\n")
     open(os.path.join(ROOT, "robots.txt"), "w").write(
         "User-agent: *\nDisallow: /src/\nDisallow: /tools/\nDisallow: /send-form.php\n\n"
         f"Sitemap: {SITE}/sitemap.xml\n")
-    print(f"wrote sitemap.xml ({len(urls)} pages) and robots.txt")
+    n_img = sum(len(p["_images"]) for p in pages if not p.get("noindex"))
+    print(f"wrote sitemap.xml ({len(urls)} pages, {n_img} images) and robots.txt")
 
 
 if __name__ == "__main__":

@@ -46,6 +46,11 @@ Manager, turn on "Show hidden files" to check it is there.
 2. REPLACING THE WORDPRESS SITE
 -------------------------------
 1. In Hostinger, make a full backup of the current website first.
+   Before deleting anything, look in public_html for a file named like
+   google1234abcd.html (Google Search Console verification). Keep it in
+   public_html, or Search Console will lose access. If Search Console was
+   verified through a WordPress plugin (Site Kit or All in One SEO), verify it
+   again afterwards using "HTML file" or "Domain" in Search Console settings.
 2. Move the WordPress files out of public_html (for example into a folder called
    old-wordpress outside public_html), or delete them after the backup.
    The old .htaccess must be replaced by the new one.
